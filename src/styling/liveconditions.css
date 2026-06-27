@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet');
+.liveconditionsdiv{
+    width: 88%;
+    height: 30%;
+    border-radius: 20px;
+     
+    background: rgba(255, 255, 255, .25);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.currentconditions{
+    width: 100%;
+    height: 100%;
+
+}
+.liveconditionstext{
+    margin: 0;
+    color: lightgray;
+    opacity: 0.8;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: 'Inter', sans-serif;
+}
+.cards3
+{
+    margin-top: 15px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid white;
+    animation: waveText 1s ease-in-out;
+}
+.cards4
+{
+    margin-top: 15px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid white;
+    
+}
+
+.humidity 
+{
+    height: 85%;
+color: white;
+font-size: 16px;
+text-align: center;
+align-content: center;
+border-right: 1px solid white;
+font-family: 'Inter', sans-serif;
+width: 30%;
+
+}
+.wind
+{ height: 85%;
+    width: 30%;
+color: white;
+font-size: 16px;
+text-align: center;
+align-content: center;
+border-right: 1px solid white;
+font-family: 'Inter', sans-serif;
+
+}
+.pressure
+{
+    width: 30%;
+color: white;
+font-size: 16px;
+text-align: center;
+align-content: center;
+font-family: 'Inter', sans-serif;
+}
+.humiditytext{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.humidityvalue{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.windtext{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.windvalue{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.pressuretext{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.pressurevalue{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.sunsetsunrise{
+
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: waveText 1s ease-in-out;
+}
+.sunsetsunrise1{
+
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.sunrise{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+}
+.sunset{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+}
+.sunrisetext{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+
+}
+.sunemoji{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+}
+.sunrisevalue{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+}
+.sunsettext{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+}
+.moonemoji{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+}
+.sunsetvalue{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+}
+@keyframes waveText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+@media screen and (max-width:425px) {
+    .liveconditionsdiv{
+        width: 97%;
+        height: 30%;
+        border-radius: 20px;
+        background:none;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+     
+    }
+    .currentconditions{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .liveconditionstext{
+        margin: 0;
+        color: lightgray;
+        opacity: 0.8;
+        font-size: 14px;
+        padding-left: 14px;
+        padding-top: 10px;
+        font-family: 'Inter', sans-serif;
+    }
+    .cards3
+    {
+        margin-top: 15px;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-top: 1px solid white;
+        animation: waveText 1s ease-in-out;
+    }
+    .cards4
+    {
+        margin-top: 15px;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-top: 1px solid white;
+        
+    }
+    
+    .humidity 
+    {
+        height: 85%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    border-right: 1px solid white;
+    font-family: 'Inter', sans-serif;
+    width: 30%;
+    
+    }
+    .wind
+    { height: 85%;
+        width: 30%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    border-right: 1px solid white;
+    font-family: 'Inter', sans-serif;
+    
+    }
+    .pressure
+    {
+        width: 30%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Inter', sans-serif;
+    }
+    .humiditytext{
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+    }
+    .humidityvalue{
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+    }
+    .windtext{
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+    }
+    .windvalue{
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+    }
+    .pressuretext{
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+    }
+    .pressurevalue{
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+    }
+    .sunsetsunrise{
+    
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        animation: waveText 1s ease-in-out;
+    }
+    .sunsetsunrise1{
+    
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .sunrise{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        align-content: center;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+    }
+    .sunset{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        align-content: center;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+    }
+    .sunrisetext{
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+    
+    }
+    .sunemoji{
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+    }
+    .sunrisevalue{
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+    }
+    .sunsettext{
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+    }
+    .moonemoji{
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+    }
+    .sunsetvalue{
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+    }
+    @keyframes waveText {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      
+        50% {
+          transform: translateY(-10px);
+        }
+      
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+}

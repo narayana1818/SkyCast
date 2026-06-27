@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+
+.aqidiv {
+        width: 88%;
+        height: 30%;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, .30);
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.aqi {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        animation: waveText 1s ease-in-out;
+}
+
+.aqi1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+}
+
+.aqiresult {
+        height: 100%;
+        width: 30%;
+        padding-left: 20px;
+        padding-top: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+}
+
+.aqibar {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.co {
+        width: 80%;
+        height: 85%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        border-radius: 15px;
+        text-align: center;
+        align-content: center;
+        transition: 0.1s ease-in-out;
+}
+
+.co:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.o3 {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        border-radius: 15px;
+        width: 80%;
+        height: 85%;
+        text-align: center;
+        align-content: center;
+        transition: 0.1s ease-in-out;
+}
+
+.o3:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.no2 {
+        border-radius: 15px;
+        width: 80%;
+        height: 85%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        transition: 0.1s ease-in-out;
+        text-align: center;
+        align-content: center;
+}
+
+.no2:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.so2 {
+        border-radius: 15px;
+        width: 80%;
+        height: 85%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        transition: 0.1s ease-in-out;
+        text-align: center;
+        align-content: center;
+}
+
+.so2:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.cotext {
+        margin: 0;
+        color: white;
+        font-weight: bolder;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+}
+
+.covalue {
+        margin: 0;
+        color: white;
+        font-weight: bolder;
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+}
+
+.o3text {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        font-family:
+                'Inter', sans-serif;
+}
+
+.o3value {
+        margin: 0;
+        color:white;
+        font-size: 15px;
+        font-weight: bolder;
+        font-family: 'Inter', sans-serif;
+}
+
+.so2text {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+}
+
+.so2value {
+        margin: 0;
+        color:white;
+        font-weight: bolder;
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+}
+
+.no2text {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+}
+
+.no2value {
+        margin: 0;
+        color:white;
+        font-size: 15px;
+        font-weight: bolder;
+        font-family: 'Inter', sans-serif;
+}
+
+.aqibar1 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.aqiguagetext{
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        color: whitesmoke;
+}
+.aqi-gauge-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+}
+
+.aqi-gauge-value {
+        font-family: 'Inter', sans-serif;
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -1px;
+        transition: color 0.5s ease;
+}
+
+.aqi-gauge-badge {
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        font-weight: 800;
+        padding: 3px 12px;
+        border-radius: 20px;
+        letter-spacing: 0.04em;
+        transition: background 0.5s ease, color 0.5s ease;
+}
+
+.aqi-gauge-scale {
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        color:white;
+        font-weight: bolder;
+        margin-top: 2px;
+}
+
+@keyframes waveText {
+        0% {
+                opacity: 0;
+                transform: translateY(20px);
+        }
+
+        50% {
+                transform: translateY(-10px);
+        }
+
+        100% {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+
+@media screen and (max-width:425px) {
+      
+.aqidiv {
+        width: 97%;
+        height: 36%;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.aqi {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        animation: waveText 1s ease-in-out;
+}
+
+.aqi1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+}
+
+.aqiresult {
+        height: 40%;
+        width: 100%;
+        padding-left: 35px;
+        padding-top: 5px;
+        display: grid;
+        grid-template-columns: 120px 120px;
+}
+
+.aqibar {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.co {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        box-shadow:none;
+        border-radius: 0px;
+        text-align: center;
+        border-right: 1px solid white;
+        align-content: center;
+        transition: 0.1s ease-in-out;
+}
+
+.co:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.o3 {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        box-shadow:none;
+        border-radius: 0px;
+        text-align: center;
+        border-bottom: 1px solid white;
+        align-content: center;
+        transition: 0.1s ease-in-out;
+}
+
+.o3:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.no2 {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        box-shadow:none;
+        border-radius: 0px;
+        border-top: 1px solid white;
+        border-right: 1px solid white;
+        text-align: center;
+        align-content: center;
+        transition: 0.1s ease-in-out;
+}
+
+.no2:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.so2 {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        box-shadow:none;
+        border-radius: 0px;
+        text-align: center;
+        align-content: center;
+        transition: 0.1s ease-in-out;
+}
+
+.so2:hover {
+        transform: scale(1.006);
+        backdrop-filter: blur(200px);
+        -webkit-backdrop-filter: blur(200px);
+}
+
+.cotext {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+}
+
+.covalue {
+        margin: 0;
+        color: lightgray;
+        text-shadow:
+        0 2px 8px rgba(0,0,0,0.35),
+        0 0 20px rgba(255,255,255,0.12);
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+}
+
+.o3text {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        font-family:
+                'Inter', sans-serif;
+}
+
+.o3value {
+        margin: 0;
+        color:lightgray ;
+        text-shadow:
+        0 2px 8px rgba(0,0,0,0.35),
+        0 0 20px rgba(255,255,255,0.12);
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+}
+
+.so2text {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+}
+
+.so2value {
+        margin: 0;
+        color: lightgray;
+        text-shadow:
+        0 2px 8px rgba(0,0,0,0.35),
+        0 0 20px rgba(255,255,255,0.12);
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;
+}
+
+.no2text {
+        margin: 0;
+        color: white;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+}
+
+.no2value {
+        margin: 0;
+        color: lightgray;
+        font-size: 15px;
+        text-shadow:
+        0 2px 8px rgba(0,0,0,0.35),
+        0 0 20px rgba(255,255,255,0.12);
+        font-family: 'Inter', sans-serif;
+}
+
+.aqibar1 {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.aqiguagetext{
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        color: whitesmoke;
+}
+.aqi-gauge-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+}
+
+.aqi-gauge-value {
+        font-family: 'Inter', sans-serif;
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -1px;
+        transition: color 0.5s ease;
+}
+
+.aqi-gauge-badge {
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 3px 12px;
+        border-radius: 20px;
+        letter-spacing: 0.04em;
+        transition: background 0.5s ease, color 0.5s ease;
+}
+
+.aqi-gauge-scale {
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+        font-family: 'Inter', sans-serif;
+        font-size: 9px;
+        color: rgba(255, 255, 255, 0.35);
+        margin-top: 2px;
+}
+
+@keyframes waveText {
+        0% {
+                opacity: 0;
+                transform: translateY(20px);
+        }
+
+        50% {
+                transform: translateY(-10px);
+        }
+
+        100% {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}  
+}
