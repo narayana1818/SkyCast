@@ -6,9 +6,9 @@
     height: 20%;
 
     border-radius: 20px;
-    background: rgba(255, 255, 255, .7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, .003);
+    backdrop-filter: blur(10px);
+
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
             rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -213,15 +213,14 @@
         background:none;
         border: none;
         box-shadow: none;
-        line-height: 25px;
+        line-height: 26px;
         align-content: center;
         font-family: 'Inter', sans-serif;
-        background: rgba(255, 255, 255, .001);
+        background: rgba(255, 255, 255, .003);
         backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-      transition: 0.1s ease-in-out;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+         border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
         transition: 0.1s ease-in-out;
     
     }
