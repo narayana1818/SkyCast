@@ -34,7 +34,7 @@ function aqiCategory(aqi) {
 const ARC_LEN = 264
 
 const Aqi = () => {
-  const { aqiData } = useContext(Weathercontext)
+  const { aqiData,isMobile } = useContext(Weathercontext)
   const currentHour = new Date().getHours()
 
   const overall = useMemo(() => {
@@ -60,19 +60,19 @@ const Aqi = () => {
           <div className="aqiresult">
             <div className="co">
               <h2 className="cotext">CO</h2>
-              <h2 className="covalue">{aqiData.hourly.carbon_monoxide[currentHour]}</h2>
+              <h2 className="covalue">{aqiData.hourly.carbon_monoxide[currentHour]} <br className="mobilebreak1" /> mg/m³</h2>
             </div>
             <div className="o3">
               <h2 className="o3text">O3</h2>
-              <h2 className="o3value">{aqiData.hourly.ozone[currentHour]}</h2>
+              <h2 className="o3value">{aqiData.hourly.ozone[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
             </div>
             <div className="no2">
               <h2 className="no2text">NO2</h2>
-              <h2 className="no2value">{aqiData.hourly.nitrogen_dioxide[currentHour]}</h2>
+              <h2 className="no2value">{aqiData.hourly.nitrogen_dioxide[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
             </div>
             <div className="so2">
               <h2 className="so2text">SO2</h2>
-              <h2 className="so2value">{aqiData.hourly.sulphur_dioxide[currentHour]}</h2>
+              <h2 className="so2value">{aqiData.hourly.sulphur_dioxide[currentHour]} <br className="mobilebreak1" />μ g/m³</h2>
             </div>
           </div>
 

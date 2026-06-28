@@ -10,9 +10,10 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "@lottiefiles/dotlottie-react": "^0.19.4",
     "animate.css": "^4.1.1",
     "react": "^19.2.7",

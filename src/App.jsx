@@ -184,7 +184,7 @@ function getbackground()
     <ToastContainer  position="top-right"    toastClassName="myToast" bodyClassName="myToastBody" progressClassName="myProgress" />
     <div className="container"  style={{backgroundImage: `url(${getbackground()})`,backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: isMobile ? "scroll" : "fixed",overflow: "hidden"}}>
       {
- <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,inputref}}> 
+ <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,inputref,isMobile}}> 
         <Totalpage  />
         {
           loading &&   

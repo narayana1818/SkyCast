@@ -75,13 +75,10 @@ if(tempData){
       <h2 className="pressure">Pressure <br />___kPa</h2>
       </div>
     <div className="sunsetsunrise1" > 
-      
       <h2 className="sunrise">Sunrise <br />☀️ <br />___ A.M </h2>
       <h2 className="sunset">Sunset <br />🌕 <br />___ P.M</h2>
        </div>
-
-
-        </div>
+      </div>
 
       )
      }
