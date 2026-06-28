@@ -48,7 +48,7 @@ top: 0;
   border: none;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  
 
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow:
@@ -316,7 +316,7 @@ justify-content: space-evenly;
     border: none;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+ 
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.25),
@@ -404,9 +404,8 @@ justify-content: space-evenly;
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
     color:white;
-    background: rgba(255, 255, 255, .25);
+    background: rgba(255, 255, 255, .08);
     backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     animation: waveText 1s ease-in-out;
@@ -444,9 +443,9 @@ justify-content: space-evenly;
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
     color:white;
-    background: rgba(255, 255, 255, .25);
+    background: rgba(255, 255, 255, .08);
     backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    
   transition: 0.1s ease-in-out;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -601,9 +600,8 @@ justify-content: space-evenly;
     font-family: 'Inter', sans-serif ; 
     border-radius: 10px;
     border: none;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.25),
@@ -675,7 +673,7 @@ justify-content: space-evenly;
 .tempdivattributes{
     width: 97%;
     height: 15%;
-   
+     margin-top: -10px;
      display: flex;
     align-items:normal;
     justify-content: space-around;
@@ -693,9 +691,9 @@ justify-content: space-evenly;
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
     color:white;
-    background: rgba(255, 255, 255, .25);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+     background: rgba(255, 255, 255, .08);
+     backdrop-filter: blur(10px);
+    
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     animation: waveText 1s ease-in-out;
@@ -733,10 +731,9 @@ justify-content: space-evenly;
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
     color:white;
-    background: rgba(255, 255, 255, .25);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-  transition: 0.1s ease-in-out;
+    background: rgba(255, 255, 255, .08);
+     backdrop-filter: blur(10px);
+    
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     animation: waveText 1s ease-in-out;
@@ -794,7 +791,7 @@ justify-content: space-evenly;
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
     margin: 0;
-    margin-top: 0px;
+    margin-top: 15px;
     margin-left: 40px;
     animation: waveText 1s ease-in-out;
 }

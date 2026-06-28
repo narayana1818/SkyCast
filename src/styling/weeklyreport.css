@@ -54,9 +54,6 @@
     text-align: center;
     align-content: center;
     font-family: 'Inter', sans-serif;
-    background: rgba(255, 255, 255, 0.08);
-     border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 18px;
   transition: 0.1s ease-in-out;
 }
