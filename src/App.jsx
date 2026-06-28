@@ -6,7 +6,7 @@ import './App.css'
 import  Totalpage from './page/Totalpage'
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import clouds from './assets/cloudy.jpg';
+import clouds from './assets/fullclouds3.jpg';
 import moon from './assets/moon.jpg';
 import sunny from './assets/sunny.jpg';
 import rain from './assets/rain.jpg';
@@ -179,60 +179,10 @@ function getbackground()
     }}
 
 
-function getcolour(params) {
-  const currenttime=new Date(tempData?.current?.time).getHours();
-  if (!tempData) {
-    return "180deg,#2D8CFF 0%,#5EB7FF 45%,#B9E4FF 100%"; 
-  }
-  if(currenttime>=6 && currenttime<=7 && tempData.current.rain === 0 )
-    {
-        return  "180deg,#496A9B 0%,#F6A24D 65%,#FFD89B 100%";
-    
-    
-    }
-    else if(currenttime>=7 && currenttime<18 && tempData.current.rain === 0 && tempData.current.cloud_cover < 30 )
-    {
-        return "180deg,#2D8CFF 0%,#5EB7FF 45%,#B9E4FF 100%";
-    
-    
-    }
-    else if(currenttime>=18 && currenttime<19 && tempData.current.rain === 0 )
-    {
-        return "180deg,#662D5C 0%,#D84A5B 55%,#FF8C42 100%";
-    
-    
-    }
-    else if(currenttime>=19 || currenttime<6 && tempData.current.rain === 0)
-    {
-        return  "180deg,#050B18 0%,#112240 60%,#284C73 100%";
-    
-    }
-    else if(tempData.current.cloud_cover >= 30 && tempData.current.cloud_cover <= 80 &&tempData.current.rain>1)
-    {
-        return  "180deg,#203A43 0%,#2C5364 55%,#4A7B6F 100%";
-    }
-    else if(tempData.current.cloud_cover >= 30 && tempData.current.cloud_cover <= 60 &&tempData.current.rain===0)
-      {
-          return  "  180deg, #0F4C81 0%,#2D7DD2 35%,#6EB5FF 70%,#DFF3FF 100%";
-      }
-    else if(tempData.current.cloud_cover >= 61 && tempData.current.cloud_cover <= 100 &&tempData.current.rain===0)
-      {
-          return  "180deg,#3E536B 0%,#667D94 55%,#AAB7C4 100%";
-      }
-
-    else if(tempData.current.rain > 0 )
-    {
-        return  "180deg,#203A43 0%,#2C5364 55%,#4A7B6F 100%" ;
-    }
-    else{
-        return  "180deg,#0D1B2A 0%,#2C2C54 50%,#4B3F72 100%";
-    }
-}
-
-  return (
+ return (
     <>
     <ToastContainer  position="top-right"    toastClassName="myToast" bodyClassName="myToastBody" progressClassName="myProgress" />
-    <div className="container" style={ isMobile ?{ background:`linear-gradient(${getcolour()})`,overflow:"hidden"}: { backgroundImage: `url(${getbackground()})`,backgroundSize: "cover", backgroundRepeat: "no-repeat",position:"fixed"}}>
+    <div className="container"  style={{backgroundImage: `url(${getbackground()})`,backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: isMobile ? "scroll" : "fixed",overflow: "hidden"}}>
       {
  <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,inputref}}> 
         <Totalpage  />

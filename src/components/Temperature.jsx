@@ -126,8 +126,8 @@ console.log(isMobile)
           else{
               return  storm;
           }}
-    
-    
+
+
         console.log(isMobile);
         console.log(getbackground());
   return (
@@ -144,13 +144,13 @@ console.log(isMobile)
   
   {
  tempData?(
-    <div className="temperature1"  style={isMobile ? {backgroundImage:`url(${getbackground()})`,backgroundSize:"cover",backgroundRepeat:"no-repeat",zIndex:"-1"}:{}}>
+    <div className="temperature1">
       {
         isMobile ? 
         (
        <div className="navbar">
         <h4> ⛅️ SkyCast</h4>
-        <input type="text"  placeholder="Search for city"  ref={inputref}    />
+        <input type="text"  placeholder="Search for city"  ref={inputref}   onKeyDown={(e) => {if (e.key === "Enter") { getlocation();}}} />
         <button type="submit"  onClick={getlocation}>🔍</button>
       </div>):(
      ""
@@ -160,7 +160,7 @@ console.log(isMobile)
      <h4 className="cityname"  key={city.name}> <span className="locationsymbol">📍</span>{city.name}, <br className="mobilebreak" />{city.state}</h4>
      <h4 className="dateday"  key={tempData.current.temperature_2m}>{day},{formattedDate} {currentTime}</h4>
      </div>
-     <div className="temperature">
+     <div className="temperature"  >
      <h2 className="degrees" key={tempData.current.temperature_2m}>{tempData.current.temperature_2m}&deg;<span className="celciussymbol">C</span> </h2>
      <h2 className="highlow"   key={tempData.current.apparent_temperature}> Feels like:{tempData.current.apparent_temperature}<span style={{paddingLeft:"15px"}}>High:{tempData.daily.temperature_2m_max[0]}</span> <span style={{paddingLeft:"20px"}}>Low:{tempData.daily.temperature_2m_min[0]}</span></h2>
      </div>
