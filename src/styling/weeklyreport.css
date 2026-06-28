@@ -60,7 +60,6 @@
 .card2:hover{
     transform: scale(1.006px);
     backdrop-filter: blur(200px);
-    -webkit-backdrop-filter: blur(200px);
 }
 
 
@@ -142,7 +141,6 @@ margin-top: -10px;
      background:none;
      border: none;
     backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
     box-shadow: none;
     margin-top: 25px;
   
@@ -206,12 +204,7 @@ margin-top: -10px;
   border-radius: 0px;
   transition: 0.1s ease-in-out;
 }
-.card2:hover
-{
-    transform: scale(1.006px);
-    backdrop-filter: blur(200px);
-    -webkit-backdrop-filter: blur(200px);
-}
+
 
 
 .weekday{

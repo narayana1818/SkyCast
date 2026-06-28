@@ -218,10 +218,8 @@ justify-content: space-evenly;
     height: 40%;
     background:none;
     backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
     border:none;
     box-shadow:none;
-  
     border-radius: 0px;
 }
 
@@ -437,7 +435,7 @@ justify-content: space-evenly;
    
 }
 }
-@media screen and  (min-width:320px) and  (max-width:425px)
+@media screen and  (min-width:321px) and  (max-width:425px)
  {
     .temperaturediv
 {
@@ -445,10 +443,8 @@ justify-content: space-evenly;
     height: 520px;
     background:none;
     backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
     border:none;
     box-shadow:none;
-  
     border-radius: 0px;
   }
 
