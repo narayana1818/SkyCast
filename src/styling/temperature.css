@@ -6,7 +6,7 @@
 {
     width: 88%;
     height: 33%;
-    background: rgba(255, 255, 255, .008);
+    background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     border: 1px solid rgba(255, 255, 255, 0.15);
