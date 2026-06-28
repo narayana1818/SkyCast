@@ -59,11 +59,11 @@ font-family: 'Inter', sans-serif;
     .mapdiv
     {
       width: 97%;
-      height: 20%;
+      height: 23%;
       border-radius: 20px;
       background:none;
       backdrop-filter: blur(0px);
-      -webkit-backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px); 
       border:none;
       box-shadow:none;
   
