@@ -131,31 +131,13 @@ console.log(isMobile)
         console.log(isMobile);
         console.log(getbackground());
   return (
-  <>{
-
-    isMobile ?(""):
-    (    <div className="navbar">
-        <h4> ⛅️ SkyCast</h4>
-        <input type="text"  placeholder="Search for city"  ref={inputref}  onKeyDown={(e) => {if (e.key === "Enter") { getlocation();}}}  />
-        <button type="submit"  onClick={getlocation} >🔍</button>
-      </div>)
-}
+  <>
      <div  className="temperaturediv">
   
   {
  tempData?(
     <div className="temperature1">
-      {
-        isMobile ? 
-        (
-       <div className="navbar">
-        <h4> ⛅️ SkyCast</h4>
-        <input type="text"  placeholder="Search for city"  ref={inputref}   onKeyDown={(e) => {if (e.key === "Enter") { getlocation();}}} />
-        <button type="submit"  onClick={getlocation}>🔍</button>
-      </div>):(
-     ""
-      )
-}
+      
      <div className="temperaturecity">
      <h4 className="cityname"  key={city.name}> <span className="locationsymbol">📍</span>{city.name}, <br className="mobilebreak" />{city.state}</h4>
      <h4 className="dateday"  key={tempData.current.temperature_2m}>{day},{formattedDate} {currentTime}</h4>

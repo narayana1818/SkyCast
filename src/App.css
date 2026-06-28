@@ -16,6 +16,75 @@
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
+
+
+.navbar{
+  height:8vh;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  align-items: center;
+padding: 0px 25px;
+position: sticky;
+top: 0;
+z-index: 999;
+  
+}
+.navbar h4{
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
+
+}
+.navbar input{
+  height: 60%;
+  width:35vh;
+  color: white;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif ;
+  padding-left: 10px;
+  margin-left: 100px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.25),
+      inset 0 1px 1px rgba(255,255,255,0.2);
+}
+
+.navbar input::placeholder{
+  color: white;
+  font-family: 'Inter', sans-serif ;
+}
+.navbar input:focus{
+  outline: none;
+}
+
+.navbar button{
+  height: 30px;
+  width:30px;
+  color: white;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif ;
+  text-align: center;
+  align-content: center;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.25),
+      inset 0 1px 1px rgba(255,255,255,0.2);
+}
 .myToast {
   background: rgba(255,255,255,.25) !important;
   backdrop-filter: blur(20px) !important;
@@ -40,8 +109,9 @@
 @media screen and (max-width:320px) {
   .container{
     width: 100%;
-    height: 1900px;
+    height:1880px;
     position: relative;
+    background-position: 80% center !important;
  
 }
   .loader{
@@ -75,14 +145,134 @@
   .myProgress{
     background: #4FACFE !important; 
   }
-}@media screen and (min-width:320px) and (max-width:425px) {
+  .navbar{
+    height:50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top: 0;
+
+  }
+  .navbar h4{
+   display: none;
+  
+  }
+  .navbar input{
+    margin-left: 0px;
+    height: 65%;
+    width:230px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif ; 
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+ 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255,255,255,0.2);
+  }
+  
+  .navbar input::placeholder{
+    color: white;
+    font-family: 'Inter', sans-serif ;
+  }
+  .navbar input:focus{
+    outline: none;
+  }
+  
+  .navbar button{
+    margin-left: 20px;
+    height: 30px;
+    width:30px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif ;
+    text-align: center;
+    align-content: center;
+    
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255,255,255,0.2);
+  }
+}
+@media screen and (min-width:321px) and (max-width:425px) {
   .container{
     width: 100%;
-    height: 1900px;
+    height: 1880px;
     position: relative;
     background-position: 80% center !important;
  
  
+}
+.navbar{
+  height:50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position:sticky;
+  top: 0;
+}
+.navbar h4{
+ display: none;
+
+}
+.navbar input{
+  margin-left: 0px;
+  height: 85%;
+  width:330px;
+  color: white;
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif ; 
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.25),
+      inset 0 1px 1px rgba(255,255,255,0.2);
+}
+
+.navbar input::placeholder{
+  color: white;
+  font-family: 'Inter', sans-serif ;
+}
+.navbar input:focus{
+  outline: none;
+}
+
+.navbar button{
+  margin-left: 20px;
+  height: 30px;
+  width:30px;
+  color: white;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif ;
+  text-align: center;
+  align-content: center;
+  margin-top: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.25),
+      inset 0 1px 1px rgba(255,255,255,0.2);
 }
 
   .loader{

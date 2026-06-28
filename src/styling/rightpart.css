@@ -4,7 +4,7 @@
 .right
 {
     width: 40vw;
-    height: 95vh;
+    height: 92vh;
 
     display: flex;
     flex-direction: column;
@@ -18,11 +18,12 @@
     .right
 {  
     width: 100%;
-    height: 900px;
+    height: 870px;
     display: flex;
     flex-direction: column;
     align-items: center;
-justify-content: baseline;
-    margin-top: -30px;
+    justify-content: space-around;
+
+    margin-top: 0px;
 }
 }

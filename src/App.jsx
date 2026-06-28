@@ -183,9 +183,15 @@ function getbackground()
     <>
     <ToastContainer  position="top-right"    toastClassName="myToast" bodyClassName="myToastBody" progressClassName="myProgress" />
     <div className="container"  style={{backgroundImage: `url(${getbackground()})`,backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: isMobile ? "scroll" : "fixed",}}>
-      {
- <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,inputref,isMobile}}> 
-        <Totalpage  />
+      {  
+       
+ <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,isMobile}}> 
+  <div className="navbar">
+        <h4> ⛅️ SkyCast</h4>
+        <input type="text"  placeholder="Search for city"  ref={inputref}  onKeyDown={(e) => {if (e.key === "Enter") { getlocation();}}}  />
+        <button type="submit"  onClick={getlocation} >🔍</button>
+      </div>
+        <Totalpage />
         {
           loading &&   
           <div className="loader">
