@@ -1,15 +1,6 @@
 import React,{useContext,useEffect,useState} from 'react'
 import {Weathercontext,usecontext} from '../context/Weathercontext';
 import '../styling/temperature.css'
-import clouds from '../assets/cloudy.jpg';
-import moon from '../assets/moon.jpg';
-import sunny from '../assets/sunny.jpg';
-import rain from '../assets/rain.jpg';
-import sunrise from '../assets/sunrise.jpg';
-import sunset from '../assets/sunset.jpg';
-import storm from '../assets/storm.jpg';
-import lightclouds from '../assets/lightclouds.jpg'
-import lightclouds2 from '../assets/lightclouds2.jpg'
 
 const Temperature = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
@@ -78,58 +69,10 @@ console.log(isMobile)
   
    uvRate=getuvrate();
 }
-    const currenttime=new Date(tempData?.current?.time).getHours();
-    function getbackground()
-     {
-       if (!tempData) {
-          return sunny; 
-        }
-      if(currenttime>=6 && currenttime<=7 && tempData.current.rain === 0 )
-          {
-              return  sunrise;
-          
-          
-          }
-          else if(currenttime>=7 && currenttime<18 && tempData.current.rain === 0 && tempData.current.cloud_cover < 30 )
-          {
-              return  sunny;
-          
-          
-          }
-          else if(currenttime>=18 && currenttime<19 && tempData.current.rain === 0 )
-          {
-              return sunset;
-          
-          
-          }
-          else if(currenttime>=19 || currenttime<6 && tempData.current.rain === 0)
-          {
-              return  moon;
-          
-          }
-          else if(tempData.current.cloud_cover >= 30 && tempData.current.cloud_cover <= 80 &&tempData.current.rain>1)
-          {
-              return  rain;
-          }
-          else if(tempData.current.cloud_cover >= 30 && tempData.current.cloud_cover <= 60 &&tempData.current.rain===0)
-            {
-                return  lightclouds2;
-            }
-            else if(tempData.current.cloud_cover >= 61 && tempData.current.cloud_cover <=100 &&tempData.current.rain===0)
-              {
-                  return  clouds;
-              }
-          else if(tempData.current.rain > 0 )
-          {
-              return  rain;
-          }
-          else{
-              return  storm;
-          }}
 
 
         console.log(isMobile);
-        console.log(getbackground());
+   
   return (
   <>
      <div  className="temperaturediv">
@@ -154,17 +97,7 @@ console.log(isMobile)
      </div>
 ):(
     <div className="temperature1"  >
-        {
-        isMobile ? 
-        (
-       <div className="navbar">
-        <h4> ⛅️ SkyCast</h4>
-        <input type="text"  placeholder="Search for city"  ref={inputref}   onKeyDown={(e) => {if (e.key === "Enter") { getlocation();}}}  />
-        <button type="submit"  onClick={getlocation}>🔍</button>
-      </div>):(
-     ""
-      )
-}
+      
      <div className="temperaturecity">
      <h4 className="cityname1">📍Location Unavailable</h4>
      <h4 className="dateday1">Search a city or enable location</h4>

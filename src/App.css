@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"');
 
 
+*::-webkit-scrollbar {
+  display: none;
+}
 .container{
   width: 100%;
   height: 100vh;
@@ -16,8 +19,44 @@
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
+.backgroundImage {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
+.backgroundImage.show {
+  opacity: 1;
+  z-index: -1;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.08);
+}
 
+.backgroundImage.slide-in {
+  opacity: 1;
+  z-index: -1;
+  animation: fadeScale 1.2s ease forwards;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+@keyframes fadeScale {
+  from { opacity: 0; transform: scale(1.08); }
+  to   { opacity: 1; transform: scale(1.08); }
+}
 .navbar{
   height:8vh;
   width: 100%;
@@ -112,7 +151,11 @@ z-index: 999;
     height:1880px;
     position: relative;
     background-position: 80% center !important;
+    overflow: hidden;
  
+}
+::-webkit-scrollbar {
+  display: none;
 }
   .loader{
     height: 50px;
@@ -123,6 +166,44 @@ z-index: 999;
     left: 48%;
     transform: translate(-50%, -50%);
     z-index: 1000;
+  }
+  .backgroundImage {
+    opacity: 0;
+    transition: opacity 1.2s ease;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .backgroundImage.show {
+    opacity: 1;
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.08);
+  }
+  
+  .backgroundImage.slide-in {
+    opacity: 1;
+    z-index: -1;
+    animation: fadeScale 1.2s ease forwards;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  @keyframes fadeScale {
+    from { opacity: 0; transform: scale(1.08); }
+    to   { opacity: 1; transform: scale(1.08); }
   }
   .myToast {
     background: rgba(255,255,255,.25) !important;
@@ -212,8 +293,50 @@ z-index: 999;
     height: 1880px;
     position: relative;
     background-position: 80% center !important;
+  overflow: hidden;
+    
+ }
+ ::-webkit-scrollbar{
+  display: none;
+ }
  
- 
+.backgroundImage {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 1880px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.backgroundImage.show {
+  opacity: 1;
+  z-index: -1;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.08);
+}
+
+.backgroundImage.slide-in {
+  opacity: 1;
+  z-index: -1;
+  animation: fadeScale 1.2s ease forwards;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+@keyframes fadeScale {
+  from { opacity: 0; transform: scale(1.08); }
+  to   { opacity: 1; transform: scale(1.08); }
 }
 .navbar{
   height:50px;

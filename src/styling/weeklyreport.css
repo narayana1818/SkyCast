@@ -56,6 +56,12 @@
     font-family: 'Inter', sans-serif;
   border-radius: 18px;
   transition: 0.1s ease-in-out;
+  background: rgba(255, 255, 255, .003);
+    backdrop-filter: blur(60px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            isolation:isolate;
 }
 .card2:hover{
     transform: scale(1.006px);
@@ -104,7 +110,7 @@ margin-top: -10px;
 .rainprobability
 {
     margin: 0;
-    color:darkblue;
+    color:greenyellow;
     opacity: 0.6;
     font-size: 12px;
 }

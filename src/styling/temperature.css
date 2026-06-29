@@ -487,6 +487,7 @@ justify-content: space-evenly;
     height: 15%;
      margin-top: -10px;
      display: flex;
+     backdrop-filter: blur(0px);
     align-items:normal;
     justify-content: space-around;
 }

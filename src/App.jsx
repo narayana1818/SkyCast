@@ -13,7 +13,6 @@ import rain from './assets/rain.jpg';
 import sunrise from './assets/sunrise.jpg';
 import sunset from './assets/sunset.jpg';
 import storm from './assets/storm.jpg';
-import lightclouds from './assets/lightclouds.jpg'
 import lightclouds2 from './assets/lightclouds2.jpg'
 const App = () => {
   const[city,setCity]=useState({name:null,state:null,country:null})
@@ -22,7 +21,11 @@ const App = () => {
   const[location,setLocation]=useState({latitude:null, longitude:null })
   const[tempData,setTempData]=useState(null);
   const[aqiData,setAqiData]=useState(null);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
+  const [background, setBackground] = useState(sunny);
+const [nextBackground, setNextBackground] = useState(null);
+const [fading, setFading] = useState(false);
+const [sliding, setSliding] = useState(false);
+   const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
 const inputref=useRef("");
    useEffect( ()=>{
     setError(false);
@@ -44,7 +47,6 @@ const inputref=useRef("");
       }
    )
    },[]);
-
 
    useEffect(()=>{
     if(location.latitude && location.longitude)
@@ -82,8 +84,22 @@ const inputref=useRef("");
           window.removeEventListener("resize", handleResize);
         };
       }, []);
-
-
+      useEffect(() => {
+        if (!tempData) return;
+    
+        const newBg = getbackground();
+        if (newBg === background) return;
+    
+        const img = new Image();
+        img.src = newBg;
+        img.onload = () => {
+            setNextBackground(img.src);
+            setTimeout(() => {
+                setBackground(img.src);
+                setNextBackground(null);
+            }, 1400);
+        };
+    }, [tempData]);
 
 const getlocation = async () => {
   setError(false)
@@ -182,10 +198,14 @@ function getbackground()
  return (
     <>
     <ToastContainer  position="top-right"    toastClassName="myToast" bodyClassName="myToastBody" progressClassName="myProgress" />
-    <div className="container"  style={{backgroundImage: `url(${getbackground()})`,backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: isMobile ? "scroll" : "fixed",}}>
+    <div className="container" >
+    <img className="backgroundImage show" src={background} alt="" />
+{nextBackground && (
+    <img className="backgroundImage slide-in" src={nextBackground} alt="" />
+)}
       {  
        
- <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,isMobile}}> 
+ <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,isMobile,inputref}}> 
   <div className="navbar">
         <h4> ⛅️ SkyCast</h4>
         <input type="text"  placeholder="Search for city"  ref={inputref}  onKeyDown={(e) => {if (e.key === "Enter") { getlocation();}}}  />
