@@ -21,7 +21,7 @@ const App = () => {
   const[location,setLocation]=useState({latitude:null, longitude:null })
   const[tempData,setTempData]=useState(null);
   const[aqiData,setAqiData]=useState(null);
-  const [background, setBackground] = useState(sunny);
+  const [background, setBackground] = useState(sunrise);
 const [nextBackground, setNextBackground] = useState(null);
 const [fading, setFading] = useState(false);
 const [sliding, setSliding] = useState(false);
