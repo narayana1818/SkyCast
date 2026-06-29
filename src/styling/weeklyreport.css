@@ -96,15 +96,31 @@ margin-top: -10px;
     margin: 0;
     font-size: 37px;
 }
-.maxtemp
+.tempSection{
+    font-family: 'Inter', sans-serif;
+    gap:4px;
+}
+
+.maxtemp1
 {
     margin: 0;
-    font-size: 19px;
+    font-size: 15px;
     color: white;
+    font-family: 'Inter', sans-serif;
+}
+.slash{
+    display: none;
 }
 .mintemp{
     margin: 0;
     font-size: 13px;
+   
+    color:white;
+}
+.mintemp1{
+    margin: 0;
+    font-size: 13px;
+    margin-top: -20px;
     color:white;
 }
 .rainprobability
@@ -113,6 +129,8 @@ margin-top: -10px;
     color:greenyellow;
     opacity: 0.6;
     font-size: 12px;
+    margin-top: 10px;
+margin-left: -6px;
 }
 .dateformobileweekly{
     display: none;
@@ -160,7 +178,15 @@ margin-top: -10px;
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
 }
-
+.slash{
+    display: inline;
+}
+.mintemp1{
+    margin: 0;
+    font-size: 13px;
+    margin-top: 0px;
+    color:white;
+}
 .weeklyforecast{
     width: 100%;
     height: 100%;
@@ -179,9 +205,7 @@ margin-top: -10px;
     height: 97%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    animation: waveText 1s ease-in-out;
+     animation: waveText 1s ease-in-out;
 }
 .weeklycards1{
     
@@ -191,73 +215,61 @@ margin-top: -10px;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    
-}
+    }
 .card2
 {
-    height: 30px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-   text-align: center;
-   align-content: center;
-   justify-content: space-around;
-   font-family: 'Inter', sans-serif;
-    border: none;
-    background:none;
-     border-bottom: 1px solid white;
-    box-shadow:none;
-  border-radius: 0px;
-  transition: 0.1s ease-in-out;
+    width:100%;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 12px;
+    background: rgba(255, 255, 255, .003);
+    backdrop-filter: blur(60px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-bottom:8px;
 }
-
-
-
+.daySection{
+    width:70px;
+}
+.break{
+    display: none;
+}
 .weekday{
-    margin: 0;
-  color:white;
-  opacity: 0.7;
-font-size: 15px;
-margin-top: -20px;
-text-shadow:
-0 2px 8px rgba(0,0,0,0.35),
-0 0 20px rgba(255,255,255,0.12);
+    margin:0;
+    font-size:15px;
+    font-weight:600;
 }
 .dateformobileweekly{
-    margin: 0;
-    margin-top: -17px;
-   font-size: 12px;
-    color: lightgray;
-    display: inline;
+    margin-top:2px;
+    font-size:11px;
+    color:#d5d5d5;
 }
-.weekdateheadertag{
-    margin: 0;
-    margin-top: -25px;
-}
-.weekdate{
-   display: none;
-}
-.weekemoji{
-    margin: 0;
-    font-size: 25px;
-    margin-top: -17px;
+.tempSection{
+    display:flex;
+    align-items:center;
+    gap:4px;
 }
 .maxtemp
 {
-    margin: 0;
-    font-size: 15px;
-    color: white;
-    margin-top: -17px;
+    font-size:16px;
+    font-weight:700;
 }
 .mintemp{
-    margin: 0;
-    font-size: 12px;
-    color: lightgray;
-    margin-top: -17px;
+    font-size:14px;
+    color:#ddd;
 }
-.rainprobability
-{
-   display: none;
+
+.weekemoji{
+    font-size:28px;
+}
+.rainprobability{
+    display:block;
+    color:greenyellow;
+    font-size:13px;
+    margin:0;
 }
 @keyframes waveText {
     0% {
