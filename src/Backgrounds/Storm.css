@@ -25,7 +25,7 @@ transform:translateY(-30px);
 }
 
 to{
-transform:translateY(120vh);
+transform:translateY(70vh);
 }
 
 }
@@ -91,7 +91,7 @@ opacity:0;
     }
     
     to{
-    transform:translateY(120vh);
+    transform:translateY(70vh);
     }
     
     }
