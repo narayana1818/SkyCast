@@ -57,23 +57,7 @@
         animation:pulse 4s infinite ease-in-out;
         box-shadow:0 0 80px #ffd93d;
     }
-    
-    .ray{
-        position:absolute;
-        width:8px;
-        height:60px;
-        background:#fff8c4;
-        border-radius:20px;
-        top:95px;
-        right:100px;
-        transform-origin:center 120px;
-        animation:rotate 15s linear infinite;
-    }
-    
-    .ray1{transform:rotate(0deg);}
-    .ray2{transform:rotate(90deg);}
-    .ray3{transform:rotate(45deg);}
-    .ray4{transform:rotate(135deg);}
+
     
     @keyframes pulse{
         50%{
