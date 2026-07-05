@@ -353,13 +353,14 @@ font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
         margin: 0;
+        margin-top: 4px;
     }
     .sunrisevalue{
         font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
         margin: 0;
-        margin-top: 5px;
+        margin-top: 8px;
     }
     .sunsettext{
         font-family: 'Inter', sans-serif;
@@ -372,13 +373,14 @@ font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
         margin: 0;
+        margin-top: 4px;
     }
     .sunsetvalue{
         font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
         margin: 0;
-        margin-top: 5px;
+        margin-top: 8px;
     }
     @keyframes waveText {
         0% {
