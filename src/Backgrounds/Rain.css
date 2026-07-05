@@ -13,6 +13,8 @@
     top:-20px;
     width:2px;
     height:18px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     background:white;
     opacity:.7;
     animation:rain linear infinite;
@@ -21,7 +23,7 @@
     @keyframes rain{
     
     to{
-    transform:translateY(70vh);
+    transform:translateY(60vh);
     }
     
     }
@@ -49,7 +51,7 @@
             @keyframes rain{
             
             to{
-            transform:translateY(100vh);
+            transform:translateY(60vh);
             }
             
             }
