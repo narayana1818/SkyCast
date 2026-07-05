@@ -10,8 +10,8 @@
 
 .sun{
     position:absolute;
-    width:130px;
-    height:130px;
+    width:120px;
+    height:120px;
     border-radius:50%;
     background:#FFD93D;
     top:60px;
@@ -26,9 +26,9 @@
     height:60px;
     background:#fff8c4;
     border-radius:20px;
-    top:95px;
-    right:100px;
-    transform-origin:center 120px;
+    top:0px;
+    right:90px;
+    transform-origin:center 130px;
     animation:rotate 15s linear infinite;
 }
 
