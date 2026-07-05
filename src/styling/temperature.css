@@ -353,6 +353,7 @@ justify-content: space-evenly;
     color: white;
     margin: 0;
     margin-top: 0px;
+    margin-left: 40px;
     animation: waveText 1s ease-in-out;
 }
 .celciussymbol{
@@ -367,17 +368,18 @@ justify-content: space-evenly;
 }
 
 .highlow{
-    color: lightgray;
+    color:white;
     font-size: 12px;
     text-shadow:
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
     margin: 0;
     margin-top: -7px;
+    margin-left: 20px;
     animation: waveText 1s ease-in-out;
 }
 .highlow1{
-    color: lightgray;
+    color:white;
     font-size: 15px;
     margin: 0;
     margin-top: -7px;
@@ -420,7 +422,7 @@ justify-content: space-evenly;
 { 
     font-weight:600 ;
     font-size: 12px;
-    color: lightgray;
+    color: white;
     font-family: 'Inter', sans-serif;
     margin: 0;
     
@@ -429,7 +431,7 @@ justify-content: space-evenly;
 { 
     font-weight:600 ;
     font-size: 15px;
-    color: lightgray;
+    color: white;
     font-family: 'Inter', sans-serif;
     margin: 0;
    
@@ -598,7 +600,7 @@ justify-content: space-evenly;
 }
 
 .highlow{
-    color: lightgray;
+    color:white;
     font-size: 12px;
     text-shadow:
     0 2px 8px rgba(0,0,0,0.35),
@@ -609,7 +611,7 @@ justify-content: space-evenly;
     animation: waveText 1s ease-in-out;
 }
 .highlow1{
-    color: lightgray;
+    color:white;
     font-size: 12px;
     text-shadow:
     0 2px 8px rgba(0,0,0,0.35),
@@ -656,7 +658,7 @@ justify-content: space-evenly;
 { 
     font-weight:600 ;
     font-size: 12px;
-    color: lightgray;
+    color:white;
     font-family: 'Inter', sans-serif;
     margin: 0;
     
@@ -665,7 +667,7 @@ justify-content: space-evenly;
 { 
     font-weight:600 ;
     font-size: 15px;
-    color: lightgray;
+    color:white;
     font-family: 'Inter', sans-serif;
     margin: 0;
    

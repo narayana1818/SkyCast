@@ -57,27 +57,10 @@ const Aqi = () => {
     <div className="aqidiv">
       {aqiData ? (
         <div className="aqi" key={aqiData.hourly.carbon_monoxide[currentHour]}>
-          <div className="aqiresult">
-            <div className="co">
-              <h2 className="cotext">CO</h2>
-              <h2 className="covalue">{aqiData.hourly.carbon_monoxide[currentHour]} <br className="mobilebreak1" /> mg/m³</h2>
-            </div>
-            <div className="o3">
-              <h2 className="o3text">O3</h2>
-              <h2 className="o3value">{aqiData.hourly.ozone[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
-            </div>
-            <div className="no2">
-              <h2 className="no2text">NO2</h2>
-              <h2 className="no2value">{aqiData.hourly.nitrogen_dioxide[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
-            </div>
-            <div className="so2">
-              <h2 className="so2text">SO2</h2>
-              <h2 className="so2value">{aqiData.hourly.sulphur_dioxide[currentHour]} <br className="mobilebreak1" />μ g/m³</h2>
-            </div>
-          </div>
 
-          {/* ── AQI gauge lives in your existing .aqibar slot ── */}
-          <div className="aqibar">
+
+             {/* ── AQI gauge lives in your existing .aqibar slot ── */}
+             <div className="aqibar">
             <div className="aqi-gauge-wrap">
               <svg viewBox="0 0 200 118" width="180" height="106">
                 <defs>
@@ -120,10 +103,33 @@ const Aqi = () => {
               </div>
             </div>
           </div>
+          <div className="aqiresult">
+            <div className="co">
+              <h2 className="cotext">CO</h2>
+              <h2 className="covalue">{aqiData.hourly.carbon_monoxide[currentHour]} <br className="mobilebreak1" /> mg/m³</h2>
+            </div>
+            <div className="o3">
+              <h2 className="o3text">O3</h2>
+              <h2 className="o3value">{aqiData.hourly.ozone[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
+            </div>
+            <div className="no2">
+              <h2 className="no2text">NO2</h2>
+              <h2 className="no2value">{aqiData.hourly.nitrogen_dioxide[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
+            </div>
+            <div className="so2">
+              <h2 className="so2text">SO2</h2>
+              <h2 className="so2value">{aqiData.hourly.sulphur_dioxide[currentHour]} <br className="mobilebreak1" />μ g/m³</h2>
+            </div>
+          </div>
+
+       
 
         </div>
       ) : (
         <div className="aqi1">
+           <div className="aqibar1">
+            <h2 className="aqiguagetext">AQI GUAGE📈</h2>
+          </div>
           <div className="aqiresult">
             <div className="co">
               <h2 className="cotext">CO</h2>
@@ -142,9 +148,7 @@ const Aqi = () => {
               <h2 className="so2value">___</h2>
             </div>
           </div>
-          <div className="aqibar1">
-            <h2 className="aqiguagetext">AQI GUAGE📈</h2>
-          </div>
+         
         </div>
 
       )}

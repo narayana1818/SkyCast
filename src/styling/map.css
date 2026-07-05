@@ -2,7 +2,7 @@
 
 .mapdiv{
     width: 70%;
-    height: 25%;
+    height: 27%;
     border-radius: 20px;
      
     background: rgba(255, 255, 255, 0.03);
@@ -59,7 +59,7 @@ font-family: 'Inter', sans-serif;
     .mapdiv
     {
       width: 97%;
-      height: 25%;
+      height: 27%;
       border-radius: 20px;
       background:none;
       backdrop-filter: blur(0px);

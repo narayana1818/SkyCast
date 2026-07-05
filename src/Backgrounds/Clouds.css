@@ -1,0 +1,136 @@
+.cloud-bg{
+    height: 1760px;
+    width: 100%;
+    position:absolute;
+    inset:0;
+    background:linear-gradient(#7d9dbd,#c8d8e8);
+    overflow:hidden;
+    z-index:-1;
+}
+.cloud{
+    position:absolute;
+    width:180px;
+    height:70px;
+    background:white;
+    border-radius:100px;
+    opacity:.85;
+}
+
+.cloud::before,
+.cloud::after{
+    content:"";
+    position:absolute;
+    background:white;
+    border-radius:50%;
+}
+
+.cloud::before{
+    width:80px;
+    height:80px;
+    left:25px;
+    top:-30px;
+}
+
+.cloud::after{
+    width:60px;
+    height:60px;
+    right:25px;
+    top:-20px;
+}
+
+.c1{
+    top:70px;
+    animation:moveCloud 35s linear infinite;
+}
+
+.c2{
+    top:200px;
+    animation:moveCloud 28s linear infinite;
+}
+
+.c3{
+    top:350px;
+    animation:moveCloud 40s linear infinite;
+}
+
+@keyframes moveCloud{
+
+from{
+left:-250px;
+}
+
+to{
+left:120%;
+}
+
+}
+
+@media screen and (max-width:320px) {
+    .cloud-bg{
+        height: 1860px;
+        width: 100%;
+        position:absolute;
+        inset:0;
+        background:linear-gradient(#7d9dbd,#c8d8e8);
+        overflow:hidden;
+        z-index:-1;
+    }
+    .cloud{
+        position:absolute;
+        width:180px;
+        height:70px;
+        background:white;
+        border-radius:100px;
+        opacity:.85;
+    }
+    
+    .cloud::before,
+    .cloud::after{
+        content:"";
+        position:absolute;
+        background:white;
+        border-radius:50%;
+    }
+    
+    .cloud::before{
+        width:80px;
+        height:80px;
+        left:25px;
+        top:-30px;
+    }
+    
+    .cloud::after{
+        width:60px;
+        height:60px;
+        right:25px;
+        top:-20px;
+    }
+    
+    .c1{
+        top:70px;
+        animation:moveCloud 35s linear infinite;
+    }
+    
+    .c2{
+        top:200px;
+        animation:moveCloud 28s linear infinite;
+    }
+    
+    .c3{
+        top:350px;
+        animation:moveCloud 40s linear infinite;
+    }
+    
+    @keyframes moveCloud{
+    
+    from{
+    left:-250px;
+    }
+    
+    to{
+    left:120%;
+    }
+    
+    }
+    
+}

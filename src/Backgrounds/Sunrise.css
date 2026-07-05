@@ -1,0 +1,114 @@
+.sunrise-bg{
+width: 100%;
+height: 1760px;
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+    
+    background:linear-gradient(
+    to bottom,
+    #ff9a9e,
+    #fad0c4,
+    #fbc2eb,
+    #fcd34d
+    );
+    
+    }
+    
+    .sunrise-sun{
+    
+    position:absolute;
+    
+    left:75%;
+    top: 90px;
+    
+    transform:translateX(-50%);
+    
+    width:140px;
+    height:140px;
+    
+    border-radius:50%;
+    
+    background:#FFD54F;
+    
+    box-shadow:0 0 80px #FFD54F;
+    
+    animation:sunRise 8s forwards ease;
+    
+    }
+    
+    @keyframes sunRise{
+    
+    from{
+    
+    bottom:-120px;
+    
+    }
+    
+    to{
+    
+    bottom:18%;
+    
+    }
+    
+    }
+    @media screen and (max-width:320px) {
+        .sunrise-bg{
+            width: 100%;
+            height: 1860px;
+                position:absolute;
+                inset:0;
+                overflow:hidden;
+                z-index:-1;
+                
+                background:linear-gradient(
+                to bottom,
+                #ff9a9e,
+                #fad0c4,
+                #fbc2eb,
+                #fcd34d
+                );
+                
+                }
+                
+                .sunrise-sun{
+                
+                position:absolute;
+                
+                left:75%;
+                top: 90px;
+                
+                transform:translateX(-50%);
+                
+                width:110px;
+                height:110px;
+                
+                border-radius:50%;
+                
+                background:#FFD54F;
+                
+                box-shadow:0 0 80px #FFD54F;
+                
+                animation:sunRise 8s forwards ease;
+                
+                }
+                
+                @keyframes sunRise{
+                
+                from{
+                
+                bottom:-120px;
+                
+                }
+                
+                to{
+                
+                bottom:18%;
+                
+                }
+                
+                }
+
+
+    }

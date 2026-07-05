@@ -14,7 +14,18 @@ import sunrise from './assets/sunrise.jpg';
 import sunset from './assets/sunset.jpg';
 import storm from './assets/storm.jpg';
 import lightclouds2 from './assets/lightclouds2.jpg'
+import Sunny from "./Backgrounds/Sunny";
+import Rain from "./Backgrounds/Rain";
+import Clouds from "./Backgrounds/Clouds";
+import Moon from "./Backgrounds/Moon";
+import Sunrise from "./Backgrounds/Sunrise";
+import Sunset from "./Backgrounds/Sunset";
+import Storm from "./Backgrounds/Storm";
+import LightClouds from "./Backgrounds/LightClouds";
+
 const App = () => {
+  const [currentBg, setCurrentBg] = useState(() => Sunrise);
+  const [nextBg, setNextBg] = useState(null);
   const[city,setCity]=useState({name:null,state:null,country:null})
   const[loading,setLoading]=useState(true);
   const[error,setError]=useState(false);
@@ -84,6 +95,8 @@ const inputref=useRef("");
           window.removeEventListener("resize", handleResize);
         };
       }, []);
+
+
       useEffect(() => {
         if (!tempData) return;
     
@@ -101,11 +114,29 @@ const inputref=useRef("");
         };
     }, [tempData]);
 
+
+
+    useEffect(() => {
+
+       if (!tempData) return;
+      const NewComponent = getBackgroundComponent();
+       if (NewComponent === currentBg) return;
+     setNextBg(() => NewComponent);
+  setTimeout(() => {
+  setCurrentBg(() => NewComponent);
+   setNextBg(null);
+   }, 1400);
+  
+  }, [tempData]);
+
+
+
 const getlocation = async () => {
   setError(false)
   const city1 = inputref.current.value;
   inputref.current.focus();
   inputref.current.value=""
+  inputref.current.blur(); 
 if(city1.trim()=== "")
 {
   toast.error("Please enter city",{
@@ -194,15 +225,86 @@ function getbackground()
         return  storm;
     }}
 
+    function getBackgroundComponent() {
 
+      if (!tempData) return Sunrise;
+  
+      const currenttime = new Date(tempData.current.time).getHours();
+  
+      if(currenttime>=6 && currenttime<=7 && tempData.current.rain===0){
+  
+          return Sunrise;
+  
+      }
+  
+      if(currenttime>=7 && currenttime<18 && tempData.current.rain===0 &&  tempData.current.cloud_cover<30){
+  
+          return Sunny;
+  
+      }
+  
+      if(currenttime>=18 && currenttime<19 && tempData.current.rain===0){
+  
+          return Sunset;
+  
+      }
+  
+      if((currenttime>=19 || currenttime<6) && tempData.current.rain===0){
+  
+          return Moon;
+  
+      }
+  
+      if(tempData.current.cloud_cover>=30 && tempData.current.cloud_cover<=60 && tempData.current.rain===0){
+  
+          return LightClouds;
+  
+      }
+  
+      if(tempData.current.cloud_cover>=61 && tempData.current.rain===0){
+  
+          return Clouds;
+  
+      }
+      if(tempData.current.rain>0){
+  
+          return Rain;
+  
+      }
+  else{
+      return Storm;
+  }}
+  const CurrentBg = currentBg;
+  const NextBg = nextBg;
  return (
     <>
     <ToastContainer  position="top-right"    toastClassName="myToast" bodyClassName="myToastBody" progressClassName="myProgress" />
     <div className="container" >
-    <img className="backgroundImage show" src={background} alt="" />
-{nextBackground && (
-    <img className="backgroundImage slide-in" src={nextBackground} alt="" />
-)}
+    {isMobile ? 
+    <>
+    <div className="bg show">
+      <CurrentBg />
+      </div>
+ {
+        NextBg &&
+    <div className="bg slide-in">
+    <NextBg />
+</div>
+ }
+
+</>
+    
+   :
+    (
+    <>
+      <img className="backgroundImage show" src={background} alt="" />
+      {nextBackground && (
+        <img className="backgroundImage slide-in" src={nextBackground} alt="" />
+      )}
+    </>
+  )}
+
+ 
       {  
        
  <Weathercontext.Provider value={{tempData,aqiData,location,city,getlocation,setError,setLoading,setLocation,isMobile,inputref}}> 
@@ -216,7 +318,7 @@ function getbackground()
           loading &&   
           <div className="loader">
          <DotLottieReact
-            src="https://lottie.host/0937a205-3e74-4ba0-9f1c-cc1414ad0d9a/Hc3gdx4G4G.lottie"
+           src="https://lottie.host/6e0f4d9b-7f2c-49b5-a894-5c62ab24bf93/Pk3FrZ2v8F.lottie"
            loop
            autoplay
          />

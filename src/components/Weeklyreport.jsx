@@ -53,15 +53,19 @@ const useweeklyemoji=getweeklyemoji();
      <div className="daySection">
     <h2 className="weekday">{day}</h2>
     <p className="dateformobileweekly">{formattedDate2}</p>
-</div>
+    </div>
+    <div className="emoji3">
      <h2 className="weekemoji">{useweeklyemoji}</h2>
+     </div>
      <div className="tempSection">
     <span className="maxtemp"><h2 className="maxtemp1">{tempData.daily.temperature_2m_max[i]}°</h2></span>
     <br className="break" />
     <span className="slash">/</span>
     <span className="mintemp"> <h2 className="mintemp1">{tempData.daily.temperature_2m_min[i]}°</h2></span>
 </div>
+<div className="rainprobabilitydiv">
      <h2 className="rainprobability">💧{tempData.daily.precipitation_probability_max[i]}%</h2>
+     </div>
     </div>
 
 );
@@ -79,8 +83,8 @@ else{
             <h2 className="weekday">Day</h2>
             <h2 className="weekdate1">Date</h2>
             <h2 className="weekemoji">⛅️</h2>
-            <h2 className="maxtemp">___&deg;</h2>
-            <h2 className="mintemp">___&deg;</h2>
+            <h2 className="maxtemp4">___&deg;</h2>
+            <h2 className="mintemp4">___&deg;</h2>
            </div>
        
        

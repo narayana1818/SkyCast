@@ -171,15 +171,16 @@ margin-left: -6px;
 }
 .weekdate1{
     margin: 0;
-    margin-top: -17px;
+    margin-top: -0px;
     font-size: 12px;
-    color: lightgray;
+    color: white;
     text-shadow:
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(255,255,255,0.12);
 }
 .slash{
     display: inline;
+    color: white;
 }
 .mintemp1{
     margin: 0;
@@ -193,7 +194,7 @@ margin-left: -6px;
 }
 .weeklyreporttext{
     margin: 0;
-    color: lightgray;
+    color:white;
     font-size: 14px;
     padding-left: 8px;
     padding-top: 0px;
@@ -208,7 +209,7 @@ margin-left: -6px;
      animation: waveText 1s ease-in-out;
 }
 .weeklycards1{
-    
+    margin-top: 15px;
     width: 100%;
     height: 90%;
     display: flex;
@@ -237,6 +238,13 @@ margin-left: -6px;
 .break{
     display: none;
 }
+
+.daySection{
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+}
 .weekday{
     margin:0;
     font-size:15px;
@@ -248,8 +256,12 @@ margin-left: -6px;
     color:#d5d5d5;
 }
 .tempSection{
-    display:flex;
-    align-items:center;
+display: flex;
+width: 25%;
+height: 100%;
+
+align-items: center;
+justify-content:flex-start;
     gap:4px;
 }
 .maxtemp
@@ -261,14 +273,50 @@ margin-left: -6px;
     font-size:14px;
     color:#ddd;
 }
-
+.maxtemp1
+{
+    font-size:13px;
+    font-weight:700;
+}
+.mintemp1{
+    font-size:13px;
+    color:white;
+}
+.maxtemp4
+{ color: white;
+    font-size:13px;
+    font-weight:700;
+}
+.mintemp4{
+    font-size:13px;
+    color:white;
+}
+.emoji3{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+ 
+    text-align: center;
+    align-content: center;
+}
 .weekemoji{
-    font-size:28px;
+   margin-left: 15px;
+    font-size:25px;
+    
+}
+.rainprobabilitydiv{
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
 }
 .rainprobability{
     display:block;
-    color:greenyellow;
-    font-size:13px;
+    color:mediumblue;
+    font-size:12px;
     margin:0;
 }
 @keyframes waveText {

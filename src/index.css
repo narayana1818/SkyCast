@@ -16,6 +16,7 @@ body,
 button,
 input,
 textarea,
-select{
-    font-family:inherit;
+select
+{
+font-family:inherit;
 }
