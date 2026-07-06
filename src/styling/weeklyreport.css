@@ -229,7 +229,7 @@ margin-left: -6px;
     backdrop-filter: blur(0px);
     border: none;
     box-shadow: none;
-    margin-bottom:8px;
+    border-bottom: 1px solid white;
 }
 .daySection{
     width:70px;
