@@ -47,7 +47,7 @@ const useweeklyemoji=getweeklyemoji();
         }
       );
    weeklycards.push(
-<div key={i} className={i==5 ? "card10":"card2"}>
+<div key={i} className={i>5 ? "card10":"card2"}>
      <div className="daySection">
     <h2 className="weekday">{day}</h2>
     <p className="dateformobileweekly">{formattedDate2}</p>
