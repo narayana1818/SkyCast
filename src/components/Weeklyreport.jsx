@@ -30,9 +30,7 @@ if(tempData){
 
   }    
 const useweeklyemoji=getweeklyemoji();
-
-
-    const date=new Date(tempData.daily.time[i])
+ const date=new Date(tempData.daily.time[i])
     const day=date.toLocaleDateString("en-US",{weekday:"short"})
     const  formattedDate2 = date.toLocaleDateString(
       "en-GB",
@@ -49,7 +47,7 @@ const useweeklyemoji=getweeklyemoji();
         }
       );
    weeklycards.push(
-<div key={i} className="card2">
+<div key={i} className={i==5 ? "card10":"card2"}>
      <div className="daySection">
     <h2 className="weekday">{day}</h2>
     <p className="dateformobileweekly">{formattedDate2}</p>
