@@ -225,11 +225,10 @@ margin-left: -6px;
     align-items:center;
     justify-content:space-between;
     padding:0 12px;
-    background: rgba(255, 255, 255, .003);
-    backdrop-filter: blur(60px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background: none;
+    backdrop-filter: blur(0px);
+    border: none;
+    box-shadow: none;
     margin-bottom:8px;
 }
 .daySection{
