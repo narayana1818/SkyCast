@@ -67,7 +67,27 @@
     transform: scale(1.006px);
     backdrop-filter: blur(200px);
 }
+.card10{
 
+    height: 200px;
+    width: 90px;
+    border-radius: 17px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Inter', sans-serif;
+  border-radius: 18px;
+  transition: 0.1s ease-in-out;
+  background: rgba(255, 255, 255, .003);
+    backdrop-filter: blur(60px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            isolation:isolate;
+}
+.card10:hover{
+    transform: scale(1.006px);
+    backdrop-filter: blur(200px);
+}
 
 .weekday{
     margin: 0;
@@ -138,6 +158,15 @@ margin-left: -6px;
 .weekdateheadertag{
     margin: 0;
     margin-top: -10px;
+}
+.maxtemp4
+{ color: white;
+    font-size:13px;
+    font-weight:700;
+}
+.mintemp4{
+    font-size:13px;
+    color:white;
 }
 @keyframes waveText {
     0% {
