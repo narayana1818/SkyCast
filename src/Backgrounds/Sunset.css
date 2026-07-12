@@ -46,7 +46,7 @@
 .sunset-hills {
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 200px;
   width: 100%;
   height: 26%;
   background: #241A3A;
@@ -98,13 +98,13 @@
 
 .b1 {
   left: 60%;
-  top: 24%;
+  top: 14%;
   animation: flyAcross 34s linear infinite reverse;
 }
 
 .b2 {
   left: 64%;
-  top: 28%;
+  top: 18%;
   animation: flyAcross 34s linear infinite reverse;
   animation-delay: .6s;
 }
@@ -174,7 +174,12 @@
 
 @media screen and (max-width:320px) {
   .sunset-bg {
-    height: 1860px;
+    position:absolute;
+            inset:0;
+            height: 1860px;
+            width: 100%;
+            overflow:hidden;
+            z-index:-1;
   }
 
   .sunset-sun {
