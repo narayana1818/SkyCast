@@ -1,111 +1,193 @@
-.sunset-bg{
+.sunset-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height: 1760px;
 
-    position:absolute;
-    inset:0;
-    overflow:hidden;
-    z-index:-1;
-    
-    background:linear-gradient(
-    to bottom,
-    #ff6e7f,
-    #f9d423,
-    #fbc2eb
-    );
-    width: 100%;
-    height: 1760px;
-    }
-    
-    .sunset-sun{
-    
-    position:absolute;
-    
-    left:70%;
+  background: linear-gradient(180deg,
+      #2C2A63 0%,
+      #7A3F82 22%,
+      #E8574E 48%,
+      #FF9457 72%,
+      #FFC978 100%);
+}
+
+.sunset-corona {
+  position: absolute;
+  left: 70%;
+  bottom: 18%;
+  transform: translate(-50%, 50%);
+  width: clamp(300px, 46vw, 520px);
+  height: clamp(300px, 46vw, 520px);
+  border-radius: 50%;
+  background: repeating-conic-gradient(rgba(255, 225, 170, .5) 0deg 3deg,
+      transparent 3deg 14deg);
+  mask-image: radial-gradient(circle, black 25%, transparent 65%);
+  -webkit-mask-image: radial-gradient(circle, black 25%, transparent 65%);
+  mix-blend-mode: screen;
+  animation: spin 140s linear infinite reverse;
+}
+
+.sunset-sun {
+  position: absolute;
+  left: 70%;
   top: 90px;
-    
-    transform:translateX(-50%);
-    
-    width:150px;
-    height:150px;
-    
-    border-radius:50%;
-    
-    background:#FFD54F;
-    
-    box-shadow:0 0 70px #FFD54F;
-    
-    animation:sunSet 8s forwards ease;
-    
-    }
-    
-    @keyframes sunSet{
-    
-    from{
-    
-    bottom:18%;
-    
-    }
-    
-    to{
-    
-    bottom:-150px;
-    
-    } 
-    }
-    @media screen and (max-width:320px) {
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff2c2 0%, #FFD54F 50%, #FF7A45 100%);
+  box-shadow: 0 0 50px 6px #ffdca0, 0 0 100px #FFB347, 0 0 180px rgba(255, 110, 60, .5);
+  animation: sunSet 8s forwards ease;
+}
 
+.sunset-hills {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 26%;
+  background: #241A3A;
+  clip-path: polygon(0% 55%, 14% 42%, 28% 56%, 44% 34%, 58% 52%, 74% 30%, 88% 48%, 100% 38%, 100% 100%, 0% 100%);
+  opacity: .9;
+}
 
-      .sunset-bg{
+.sunset-hills::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #1B1330;
+  clip-path: polygon(0% 78%, 18% 62%, 34% 76%, 50% 58%, 66% 72%, 82% 54%, 100% 66%, 100% 100%, 0% 100%);
+  opacity: .85;
+}
 
-        position:absolute;
-        inset:0;
-        overflow:hidden;
-        z-index:-1;
-        
-        background:linear-gradient(
-        to bottom,
-        #ff6e7f,
-        #f9d423,
-        #fbc2eb
-        );
-        width: 100%;
-        height: 1860px;
-        }
-        
-        .sunset-sun{
-        
-        position:absolute;
-        
-        left:70%;
-      top: 90px;
-        
-        transform:translateX(-50%);
-        
-        width:110px;
-        height:110px;
-        
-        border-radius:50%;
-        
-        background:#FFD54F;
-        
-        box-shadow:0 0 70px #FFD54F;
-        
-        animation:sunSet 8s forwards ease;
-        
-        }
-        
-        @keyframes sunSet{
-        
-        from{
-        
-        bottom:18%;
-        
-        }
-        
-        to{
-        
-        bottom:-150px;
-        
-        } 
-        }
+.bird {
+  position: absolute;
+  width: 18px;
+  height: 8px;
+  opacity: .5;
+}
 
-    }
+.bird::before,
+.bird::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #1B1330;
+  border-radius: 2px;
+  top: 0;
+}
+
+.bird::before {
+  left: 0;
+  transform: rotate(28deg);
+  transform-origin: right center;
+}
+
+.bird::after {
+  right: 0;
+  transform: rotate(-28deg);
+  transform-origin: left center;
+}
+
+.b1 {
+  left: 60%;
+  top: 24%;
+  animation: flyAcross 34s linear infinite reverse;
+}
+
+.b2 {
+  left: 64%;
+  top: 28%;
+  animation: flyAcross 34s linear infinite reverse;
+  animation-delay: .6s;
+}
+
+.b3 {
+  left: 70%;
+  top: 20%;
+  animation: flyAcross 40s linear infinite reverse;
+  animation-delay: 4s;
+}
+
+.sunset-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 8, 35, .34) 0%, rgba(15, 8, 35, .04) 25%, rgba(15, 8, 35, .10) 55%, rgba(15, 8, 35, .38) 100%);
+  pointer-events: none;
+}
+
+@keyframes sunSet {
+  from {
+    bottom: 18%;
+  }
+
+  to {
+    bottom: -150px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, 50%) rotate(360deg);
+  }
+}
+
+@keyframes flyAcross {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-40vw) translateY(-14px);
+  }
+
+  to {
+    transform: translateX(-85vw) translateY(0);
+  }
+}
+
+@media screen and (max-width:480px) {
+  .sunset-bg {
+    height: 1860px;
+  }
+
+  .sunset-sun {
+    width: 110px;
+    height: 110px;
+  }
+
+  .b3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .sunset-bg {
+    height: 1860px;
+  }
+
+  .sunset-sun {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sunset-corona {
+    width: 260px;
+    height: 260px;
+  }
+
+  .sunset-hills {
+    height: 22%;
+  }
+}

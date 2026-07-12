@@ -6,7 +6,16 @@ export default function Sunrise(){
 
         <div className="sunrise-bg">
 
+            <div className="sunrise-corona"></div>
             <div className="sunrise-sun"></div>
+
+            <div className="bird b1"></div>
+            <div className="bird b2"></div>
+            <div className="bird b3"></div>
+
+            <div className="sunrise-hills"></div>
+
+            <div className="sunrise-scrim"></div>
 
         </div>
 

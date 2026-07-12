@@ -1,114 +1,193 @@
-.sunrise-bg{
-width: 100%;
-height: 1760px;
-    position:absolute;
-    inset:0;
-    overflow:hidden;
-    z-index:-1;
-    
-    background:linear-gradient(
-    to bottom,
-    #ff9a9e,
-    #fad0c4,
-    #fbc2eb,
-    #fcd34d
-    );
-    
-    }
-    
-    .sunrise-sun{
-    
-    position:absolute;
-    
-    left:75%;
+.sunrise-bg {
+    width: 100%;
+    height: 1760px;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    background: linear-gradient(180deg,
+            #3B4A8C 0%,
+            #A15A9A 22%,
+            #FF7E6B 45%,
+            #FFA65C 68%,
+            #FFD97A 100%);
+}
+
+.sunrise-corona {
+    position: absolute;
+    left: 75%;
+    bottom: 18%;
+    transform: translate(-50%, 50%);
+    width: clamp(300px, 46vw, 520px);
+    height: clamp(300px, 46vw, 520px);
+    border-radius: 50%;
+    background: repeating-conic-gradient(rgba(255, 235, 170, .55) 0deg 3deg,
+            transparent 3deg 14deg);
+    mask-image: radial-gradient(circle, black 25%, transparent 65%);
+    -webkit-mask-image: radial-gradient(circle, black 25%, transparent 65%);
+    mix-blend-mode: screen;
+    animation: spin 140s linear infinite;
+}
+
+.sunrise-sun {
+    position: absolute;
+    left: 75%;
     top: 90px;
-    
-    transform:translateX(-50%);
-    
-    width:140px;
-    height:140px;
-    
-    border-radius:50%;
-    
-    background:#FFD54F;
-    
-    box-shadow:0 0 80px #FFD54F;
-    
-    animation:sunRise 8s forwards ease;
-    
-    }
-    
-    @keyframes sunRise{
-    
-    from{
-    
-    bottom:-120px;
-    
-    }
-    
-    to{
-    
-    bottom:18%;
-    
-    }
-    
-    }
-    @media screen and (max-width:320px) {
-        .sunrise-bg{
-            width: 100%;
-            height: 1860px;
-                position:absolute;
-                inset:0;
-                overflow:hidden;
-                z-index:-1;
-                
-                background:linear-gradient(
-                to bottom,
-                #ff9a9e,
-                #fad0c4,
-                #fbc2eb,
-                #fcd34d
-                );
-                
-                }
-                
-                .sunrise-sun{
-                
-                position:absolute;
-                
-                left:75%;
-                top: 90px;
-                
-                transform:translateX(-50%);
-                
-                width:110px;
-                height:110px;
-                
-                border-radius:50%;
-                
-                background:#FFD54F;
-                
-                box-shadow:0 0 80px #FFD54F;
-                
-                animation:sunRise 8s forwards ease;
-                
-                }
-                
-                @keyframes sunRise{
-                
-                from{
-                
-                bottom:-120px;
-                
-                }
-                
-                to{
-                
-                bottom:18%;
-                
-                }
-                
-                }
+    transform: translateX(-50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fff6c8 0%, #FFD54F 55%, #FF9E3D 100%);
+    box-shadow: 0 0 50px 6px #ffe9a8, 0 0 100px #FFD54F, 0 0 180px rgba(255, 158, 61, .5);
+    animation: sunRise 8s forwards ease;
+}
 
+.sunrise-hills {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 26%;
+    background: #2B2540;
+    clip-path: polygon(0% 60%, 12% 45%, 26% 58%, 40% 38%, 55% 55%, 68% 32%, 82% 50%, 100% 40%, 100% 100%, 0% 100%);
+    opacity: .9;
+}
 
+.sunrise-hills::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #221D35;
+    clip-path: polygon(0% 80%, 15% 65%, 30% 78%, 48% 60%, 62% 74%, 78% 55%, 100% 68%, 100% 100%, 0% 100%);
+    opacity: .85;
+}
+
+.bird {
+    position: absolute;
+    width: 18px;
+    height: 8px;
+    opacity: .55;
+}
+
+.bird::before,
+.bird::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: #2B2540;
+    border-radius: 2px;
+    top: 0;
+}
+
+.bird::before {
+    left: 0;
+    transform: rotate(28deg);
+    transform-origin: right center;
+}
+
+.bird::after {
+    right: 0;
+    transform: rotate(-28deg);
+    transform-origin: left center;
+}
+
+.b1 {
+    left: 20%;
+    top: 30%;
+    animation: flyAcross 30s linear infinite;
+}
+
+.b2 {
+    left: 24%;
+    top: 34%;
+    animation: flyAcross 30s linear infinite;
+    animation-delay: .6s;
+}
+
+.b3 {
+    left: 15%;
+    top: 26%;
+    animation: flyAcross 36s linear infinite;
+    animation-delay: 3s;
+}
+
+.sunrise-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 10, 35, .32) 0%, rgba(15, 10, 35, .04) 25%, rgba(15, 10, 35, .10) 55%, rgba(15, 10, 35, .35) 100%);
+    pointer-events: none;
+}
+
+@keyframes sunRise {
+    from {
+        bottom: -120px;
     }
+
+    to {
+        bottom: 18%;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, 50%) rotate(360deg);
+    }
+}
+
+@keyframes flyAcross {
+    from {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(40vw) translateY(-14px);
+    }
+
+    to {
+        transform: translateX(85vw) translateY(0);
+    }
+}
+
+@media screen and (max-width:480px) {
+    .sunrise-bg {
+        height: 1860px;
+    }
+
+    .sunrise-sun {
+        width: 110px;
+        height: 110px;
+    }
+
+    .b3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .sunrise-bg {
+        height: 1860px;
+    }
+
+    .sunrise-sun {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sunrise-corona {
+        width: 260px;
+        height: 260px;
+    }
+
+    .sunrise-hills {
+        height: 22%;
+    }
+}

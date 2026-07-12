@@ -2,83 +2,122 @@
     position:absolute;
     inset:0;
     width:100%;
-    height:100%;
+    height:1760px;
     overflow:hidden;
     z-index:-1;
 
     background:
     linear-gradient(
         180deg,
-        #53b9ff 0%,
-        #7fd3ff 45%,
-        #dff6ff 100%
+        #1E88E5 0%,
+        #42A5F5 28%,
+        #7EC8F7 55%,
+        #C7E9FB 80%,
+        #EAF7FF 100%
     );
 }
 
-/* ---------------- Sun Glow ---------------- */
+
+
+.sunny-scrim{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(ellipse at 78% 8%, rgba(10,35,60,.10) 0%, transparent 40%),
+    linear-gradient(180deg, rgba(6,20,40,.20) 0%, rgba(6,20,40,.02) 30%, rgba(6,20,40,.08) 60%, rgba(6,20,40,.32) 100%);
+    pointer-events:none;
+}
+
+
+.sun-rays{
+    position:absolute;
+    width:clamp(320px, 55vw, 620px);
+    height:clamp(320px, 55vw, 620px);
+    right:clamp(-140px, -12vw, -60px);
+    top:clamp(-140px, -12vw, -60px);
+    border-radius:50%;
+
+    background:repeating-conic-gradient(
+        rgba(255,247,190,.55) 0deg 4deg,
+        transparent 4deg 16deg
+    );
+
+    mask-image:radial-gradient(circle, black 30%, transparent 68%);
+    -webkit-mask-image:radial-gradient(circle, black 30%, transparent 68%);
+
+    mix-blend-mode:screen;
+    opacity:.7;
+
+    animation:spin 90s linear infinite;
+}
+
+
 
 .sun-glow{
 
     position:absolute;
 
-    width:340px;
-    height:340px;
+    width:clamp(240px, 40vw, 380px);
+    height:clamp(240px, 40vw, 380px);
 
-    right:-80px;
-    top:-70px;
+    right:clamp(-100px, -8vw, -60px);
+    top:clamp(-90px, -8vw, -50px);
 
     border-radius:50%;
 
     background:radial-gradient(
     circle,
-    rgba(255,240,120,.9) 0%,
-    rgba(255,240,120,.4) 45%,
-    transparent 75%
+    rgba(255,245,150,.95) 0%,
+    rgba(255,222,110,.55) 40%,
+    rgba(255,222,110,.15) 65%,
+    transparent 78%
     );
 
     animation:glow 5s ease-in-out infinite;
 }
 
-/* ---------------- Sun ---------------- */
+
 
 .sun{
 
     position:absolute;
 
-    width:120px;
-    height:120px;
+    width:clamp(90px, 14vw, 130px);
+    height:clamp(90px, 14vw, 130px);
 
     border-radius:50%;
 
-    right:40px;
-    top:50px;
+    right:clamp(28px, 6vw, 48px);
+    top:clamp(38px, 6vw, 56px);
 
     background:
-    radial-gradient(circle at 35% 35%,
-    #fff7b0,
+    radial-gradient(circle at 32% 30%,
+    #fffde3 0%,
+    #fff2a8 30%,
     #ffd93d 65%,
-    #ffb400);
+    #ffab00 100%);
 
     box-shadow:
-    0 0 40px #ffd93d,
-    0 0 80px rgba(255,217,61,.7),
-    0 0 140px rgba(255,217,61,.5);
+    0 0 30px 4px #fff7c2,
+    0 0 60px #ffd93d,
+    0 0 110px rgba(255,217,61,.75),
+    0 0 180px rgba(255,180,0,.45);
 
     animation:
     pulse 4s ease-in-out infinite;
 }
 
-/* ---------------- Clouds ---------------- */
+
 
 .cloud{
 
     position:absolute;
 
-    background:white;
+    background:linear-gradient(180deg, #ffffff 0%, #eef7ff 100%);
 
-    opacity:.55;
+    opacity:.85;
 
-    filter:blur(8px);
+    filter:blur(6px) drop-shadow(0 12px 18px rgba(30,70,120,.18));
 
     border-radius:100px;
 }
@@ -88,102 +127,102 @@
 
     content:"";
     position:absolute;
-    background:white;
+    background:inherit;
     border-radius:50%;
 }
 
 .cloud1{
 
-    width:180px;
-    height:55px;
+    width:200px;
+    height:60px;
 
-    top:170px;
-    left:-180px;
+    top:16%;
+    left:-220px;
 
-    animation:cloudMove1 60s linear infinite;
+    animation:cloudMove1 55s linear infinite;
 }
 
 .cloud1::before{
 
-    width:80px;
-    height:80px;
+    width:88px;
+    height:88px;
 
-    left:25px;
-    top:-30px;
+    left:28px;
+    top:-32px;
 }
 
 .cloud1::after{
 
-    width:90px;
-    height:90px;
+    width:100px;
+    height:100px;
 
-    right:20px;
-    top:-40px;
+    right:22px;
+    top:-44px;
 }
 
 .cloud2{
 
-    width:220px;
-    height:65px;
+    width:240px;
+    height:70px;
 
-    top:330px;
-    left:-250px;
+    top:30%;
+    left:-280px;
 
-    opacity:.35;
+    opacity:.55;
 
-    animation:cloudMove2 90s linear infinite;
+    animation:cloudMove2 80s linear infinite;
 }
 
 .cloud2::before{
 
-    width:90px;
-    height:90px;
+    width:98px;
+    height:98px;
 
-    left:35px;
-    top:-35px;
+    left:38px;
+    top:-38px;
 }
 
 .cloud2::after{
 
-    width:110px;
-    height:110px;
+    width:120px;
+    height:120px;
 
-    right:30px;
-    top:-45px;
+    right:32px;
+    top:-50px;
 }
 
 .cloud3{
 
-    width:150px;
-    height:45px;
+    width:170px;
+    height:50px;
 
-    top:520px;
-    left:-180px;
+    top:45%;
+    left:-200px;
 
-    opacity:.25;
+    opacity:.4;
 
-    animation:cloudMove1 110s linear infinite;
+    animation:cloudMove1 100s linear infinite;
 }
 
 .cloud3::before{
 
-    width:70px;
-    height:70px;
+    width:76px;
+    height:76px;
 
-    left:20px;
-    top:-25px;
+    left:22px;
+    top:-28px;
 }
 
 .cloud3::after{
 
-    width:75px;
-    height:75px;
+    width:82px;
+    height:82px;
 
-    right:15px;
-    top:-30px;
+    right:16px;
+    top:-32px;
 }
 
-/* ---------------- Floating Particles ---------------- */
+
 
 .particle{
 
@@ -194,401 +233,69 @@
 
     border-radius:50%;
 
-    background:white;
+    background:#fff;
 
-    opacity:.45;
+    box-shadow:0 0 8px 2px rgba(255,255,255,.8);
 
-    animation:float 10s linear infinite;
+    opacity:.5;
+
+    animation:float 10s ease-in-out infinite;
 }
 
-.p1{
+.p1{ left:20%; top:60%; }
+.p2{ left:60%; top:66%; animation-duration:13s; }
+.p3{ left:80%; top:40%; animation-duration:9s; }
+.p4{ left:35%; top:76%; animation-duration:12s; }
 
-    left:20%;
-    top:65%;
-}
 
-.p2{
-
-    left:60%;
-    top:70%;
-    animation-duration:13s;
-}
-
-.p3{
-
-    left:80%;
-    top:45%;
-    animation-duration:9s;
-}
-
-.p4{
-
-    left:35%;
-    top:80%;
-    animation-duration:12s;
-}
-
-/* ---------------- Animations ---------------- */
 
 @keyframes pulse{
-
-    50%{
-
-        transform:scale(1.05);
-    }
+    50%{ transform:scale(1.06); }
 }
 
 @keyframes glow{
+    50%{ transform:scale(1.1); opacity:.9; }
+}
 
-    50%{
-
-        transform:scale(1.08);
-        opacity:.85;
-    }
+@keyframes spin{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
 }
 
 @keyframes cloudMove1{
-
-    from{
-
-        transform:translateX(0);
-    }
-
-    to{
-
-        transform:translateX(calc(100vw + 350px));
-    }
+    from{ transform:translateX(0); }
+    to{ transform:translateX(calc(100vw + 350px)); }
 }
 
 @keyframes cloudMove2{
-
-    from{
-
-        transform:translateX(0);
-    }
-
-    to{
-
-        transform:translateX(calc(100vw + 450px));
-    }
+    from{ transform:translateX(0); }
+    to{ transform:translateX(calc(100vw + 450px)); }
 }
 
 @keyframes float{
-
-    0%{
-
-        transform:translateY(0);
-        opacity:.2;
-    }
-
-    50%{
-
-        opacity:.7;
-    }
-
-    100%{
-
-        transform:translateY(-35px);
-        opacity:.2;
-    }
+    0%{ transform:translateY(0); opacity:.2; }
+    50%{ opacity:.8; }
+    100%{ transform:translateY(-35px); opacity:.2; }
 }
 
-@media screen and (max-width:320px) {
-    .sunny-bg{
-        height: 1860px;
-        width: 100%;
-        position:absolute;
-        inset:0;
-        width:100%;
-        height:100%;
-        overflow:hidden;
-        z-index:-1;
-    
-        background:
-        linear-gradient(
-            180deg,
-            #53b9ff 0%,
-            #7fd3ff 45%,
-            #dff6ff 100%
-        );
-    }
-    
-    /* ---------------- Sun Glow ---------------- */
-    
-    .sun-glow{
-    
-        position:absolute;
-    
-        width:340px;
-        height:340px;
-    
-        right:-80px;
-        top:-70px;
-    
-        border-radius:50%;
-    
-        background:radial-gradient(
-        circle,
-        rgba(255,240,120,.9) 0%,
-        rgba(255,240,120,.4) 45%,
-        transparent 75%
-        );
-    
-        animation:glow 5s ease-in-out infinite;
-    }
-    
-    /* ---------------- Sun ---------------- */
-    
-    .sun{
-    
-        position:absolute;
-    
-        width:120px;
-        height:120px;
-    
-        border-radius:50%;
-    
-        right:40px;
-        top:50px;
-    
-        background:
-        radial-gradient(circle at 35% 35%,
-        #fff7b0,
-        #ffd93d 65%,
-        #ffb400);
-    
-        box-shadow:
-        0 0 40px #ffd93d,
-        0 0 80px rgba(255,217,61,.7),
-        0 0 140px rgba(255,217,61,.5);
-    
-        animation:
-        pulse 4s ease-in-out infinite;
-    }
-    
-    /* ---------------- Clouds ---------------- */
-    
-    .cloud{
-    
-        position:absolute;
-    
-        background:white;
-    
-        opacity:.55;
-    
-        filter:blur(8px);
-    
-        border-radius:100px;
-    }
-    
-    .cloud::before,
-    .cloud::after{
-    
-        content:"";
-        position:absolute;
-        background:white;
-        border-radius:50%;
-    }
-    
-    .cloud1{
-    
-        width:180px;
-        height:55px;
-    
-        top:170px;
-        left:-180px;
-    
-        animation:cloudMove1 60s linear infinite;
-    }
-    
-    .cloud1::before{
-    
-        width:80px;
-        height:80px;
-    
-        left:25px;
-        top:-30px;
-    }
-    
-    .cloud1::after{
-    
-        width:90px;
-        height:90px;
-    
-        right:20px;
-        top:-40px;
-    }
-    
-    .cloud2{
-    
-        width:220px;
-        height:65px;
-    
-        top:330px;
-        left:-250px;
-    
-        opacity:.35;
-    
-        animation:cloudMove2 90s linear infinite;
-    }
-    
-    .cloud2::before{
-    
-        width:90px;
-        height:90px;
-    
-        left:35px;
-        top:-35px;
-    }
-    
-    .cloud2::after{
-    
-        width:110px;
-        height:110px;
-    
-        right:30px;
-        top:-45px;
-    }
-    
-    .cloud3{
-    
-        width:150px;
-        height:45px;
-    
-        top:520px;
-        left:-180px;
-    
-        opacity:.25;
-    
-        animation:cloudMove1 110s linear infinite;
-    }
-    
-    .cloud3::before{
-    
-        width:70px;
-        height:70px;
-    
-        left:20px;
-        top:-25px;
-    }
-    
-    .cloud3::after{
-    
-        width:75px;
-        height:75px;
-    
-        right:15px;
-        top:-30px;
-    }
-    
-    /* ---------------- Floating Particles ---------------- */
-    
-    .particle{
-    
-        position:absolute;
-    
-        width:5px;
-        height:5px;
-    
-        border-radius:50%;
-    
-        background:white;
-    
-        opacity:.45;
-    
-        animation:float 10s linear infinite;
-    }
-    
-    .p1{
-    
-        left:20%;
-        top:65%;
-    }
-    
-    .p2{
-    
-        left:60%;
-        top:70%;
-        animation-duration:13s;
-    }
-    
-    .p3{
-    
-        left:80%;
-        top:45%;
-        animation-duration:9s;
-    }
-    
-    .p4{
-    
-        left:35%;
-        top:80%;
-        animation-duration:12s;
-    }
-    
-    /* ---------------- Animations ---------------- */
-    
-    @keyframes pulse{
-    
-        50%{
-    
-            transform:scale(1.05);
-        }
-    }
-    
-    @keyframes glow{
-    
-        50%{
-    
-            transform:scale(1.08);
-            opacity:.85;
-        }
-    }
-    
-    @keyframes cloudMove1{
-    
-        from{
-    
-            transform:translateX(0);
-        }
-    
-        to{
-    
-            transform:translateX(calc(100vw + 350px));
-        }
-    }
-    
-    @keyframes cloudMove2{
-    
-        from{
-    
-            transform:translateX(0);
-        }
-    
-        to{
-    
-            transform:translateX(calc(100vw + 450px));
-        }
-    }
-    
-    @keyframes float{
-    
-        0%{
-    
-            transform:translateY(0);
-            opacity:.2;
-        }
-    
-        50%{
-    
-            opacity:.7;
-        }
-    
-        100%{
-    
-            transform:translateY(-35px);
-            opacity:.2;
-        }
-    }
-    
+
+
+@media screen and (max-width:480px){
+
+    .sunny-bg{ height:1860px; }
+
+    .sun-rays{ opacity:.5; }
+
+    .cloud1{ top:14%; }
+    .cloud2{ top:28%; }
+    .cloud3{ top:42%; }
+}
+
+@media screen and (max-width:320px){
+
+    .sunny-bg{ height:1860px; }
+
+    .sun-glow{ width:260px; height:260px; }
+
+    .sun{ width:100px; height:100px; }
 }
