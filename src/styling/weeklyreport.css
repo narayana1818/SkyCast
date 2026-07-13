@@ -146,8 +146,7 @@ margin-top: -10px;
 .rainprobability
 {
     margin: 0;
-    color:greenyellow;
-    opacity: 0.6;
+    color:white;
     font-size: 12px;
     margin-top: 10px;
 margin-left: -6px;
@@ -284,8 +283,9 @@ margin-left: -6px;
 .daySection{
     width: 25%;
     height: 100%;
-    text-align: center;
-    align-content: center;
+    display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .weekday{
     margin:0;
@@ -301,7 +301,6 @@ margin-left: -6px;
 display: flex;
 width: 25%;
 height: 100%;
-
 align-items: center;
 justify-content:flex-start;
     gap:4px;
@@ -338,9 +337,7 @@ justify-content:flex-start;
     height: 100%;
     display: flex;
     align-items: center;
- 
-    text-align: center;
-    align-content: center;
+justify-content:flex-start;
 }
 .weekemoji{
    margin-left: 15px;
@@ -350,14 +347,13 @@ justify-content:flex-start;
 .rainprobabilitydiv{
     width: 25%;
     height: 100%;
-
     display: flex;
     align-items: center;
-    justify-content:flex-end;
+    justify-content:center;
 }
 .rainprobability{
     display:block;
-    color:greenyellow;
+    color:white;
     font-size:12px;
     margin:0;
 }

@@ -4,7 +4,6 @@ export default function Sunny() {
   return (
     <div className="sunny-bg">
 
-      <div className="sun-rays"></div>
       <div className="sun-glow"></div>
       <div className="sun"></div>
 

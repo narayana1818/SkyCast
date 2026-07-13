@@ -13,7 +13,7 @@ for (let i = 0; i < 8; i++)
      <h2 className="time">AM/PM</h2>
      <h2 className="emoji">⛅️</h2>
      <h2 className="temp">__</h2>
-     <h2 className="rainchance">%</h2>
+     <h2 className="rainchance">💧%</h2>
     </div>
   );
 }
@@ -50,7 +50,7 @@ const getemoji=houremoji();
              <h2 className="time">{hour}</h2>
              <h2 className="emoji">{getemoji}</h2>
              <h2 className="temp">{tempData.hourly.temperature_2m[i]}<span>&deg;</span></h2>
-             <h2 className="rainchance">{tempData.hourly.precipitation_probability[i]}%</h2>
+             <h2 className="rainchance">💧{tempData.hourly.precipitation_probability[i]}%</h2>
             </div>
           );
         }
@@ -64,7 +64,7 @@ const getemoji=houremoji();
 tempData?(
 
 <div className="hourforecast">
- <h2 className="hourforecasttext">🕒HOURLY FORECAST</h2>
+ <h2 className="hourforecasttext">🕒  HOURLY FORECAST</h2>
  <div className="cards" key={tempData.latitude}>
  {hourlyCards}
  </div>
