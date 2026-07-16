@@ -24,7 +24,7 @@ import Storm from "./Backgrounds/Storm";
 import LightClouds from "./Backgrounds/Lightclouds";
 
 const App = () => {
-  const [currentBg, setCurrentBg] = useState(() => Sunny);
+  const [currentBg, setCurrentBg] = useState(() => Clouds);
   const [nextBg, setNextBg] = useState(null);
   const[city,setCity]=useState({name:null,state:null,country:null})
   const[loading,setLoading]=useState(true);
@@ -76,7 +76,7 @@ const inputref=useRef("");
         data.address.municipality ||
         data.address.county;
         setCity({
-        name: cityName,
+         name: cityName,
          state: data.address.state,
          country: data.address.country,
        })})

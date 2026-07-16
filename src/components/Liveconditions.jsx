@@ -70,14 +70,9 @@ if(tempData){
         <div className="currentcondition1">
          <h2 className="liveconditionstext">🔴  LIVE CONDITIONS</h2>
       <div className="cards4" >
-      <h2 className="humidity">Humidity <br />___%</h2>
-      <h2 className="wind">Wind <br />___km/h</h2>
-      <h2 className="pressure">Pressure <br />___kPa</h2>
+      
       </div>
-    <div className="sunsetsunrise1" > 
-      <h2 className="sunrise">Sunrise <br />☀️ <br />___ A.M </h2>
-      <h2 className="sunset">Sunset <br />🌕 <br />___ P.M</h2>
-       </div>
+   
       </div>
 
       )

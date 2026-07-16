@@ -1,8 +1,9 @@
-import React, { useContext, useMemo } from 'react'
+import React, { useContext, useMemo, useState, useRef, useEffect } from 'react'
 import '../styling/aqi.css'
 import { Weathercontext } from '../context/Weathercontext'
+import AqiDropDown from '../components/AqiDropDown.jsx'
 
-const BP = {
+ const BP = {
   co:  [[0,0],[1000,50],[2000,100],[10000,150],[17000,200],[34000,300],[50000,400],[58000,500]],
   so2: [[0,0],[40,50],[80,100],[380,150],[800,200],[1600,300],[2100,400],[2620,500]],
   no2: [[0,0],[40,50],[80,100],[180,150],[280,200],[400,300],[800,400],[1600,500]],
@@ -34,9 +35,30 @@ function aqiCategory(aqi) {
 const ARC_LEN = 264
 
 const Aqi = () => {
+  const [showDropDown, setShowDropDown] = useState(false);
   const { aqiData,isMobile } = useContext(Weathercontext)
   const currentHour = new Date().getHours()
+  const aqiRef = useRef(null);
+  useEffect(() => {
 
+    function handleOutsideClick(event) {
+
+        if (
+            aqiRef.current &&
+            !aqiRef.current.contains(event.target)
+        ) {
+            setShowDropDown(false);
+        }
+
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+        document.removeEventListener("mousedown", handleOutsideClick);
+    };
+
+}, []);
   const overall = useMemo(() => {
     if (!aqiData?.hourly) return null
     const h = aqiData.hourly
@@ -54,7 +76,14 @@ const Aqi = () => {
   const rotate  = -90 + p * 180
 
   return (
-    <div className="aqidiv">
+
+    <div className="aqidiv"     ref={aqiRef} onClick = {()=> setShowDropDown(!showDropDown)} >
+       
+       {
+        showDropDown && (
+       <AqiDropDown/>
+)
+       }
       {aqiData ? (
         <div className="aqi" key={aqiData.hourly.carbon_monoxide[currentHour]}>
 
@@ -132,20 +161,16 @@ const Aqi = () => {
           </div>
           <div className="aqiresult">
             <div className="co">
-              <h2 className="cotext">CO</h2>
-              <h2 className="covalue">___</h2>
+             
             </div>
             <div className="o3">
-              <h2 className="o3text">O3</h2>
-              <h2 className="o3value">___</h2>
+            
             </div>
             <div className="no2">
-              <h2 className="no2text">NO2</h2>
-              <h2 className="no2value">___</h2>
+              
             </div>
             <div className="so2">
-              <h2 className="so2text">SO2</h2>
-              <h2 className="so2value">___</h2>
+              
             </div>
           </div>
          

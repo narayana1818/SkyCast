@@ -77,12 +77,11 @@ else{
     for(let i=0;i<7;i++)
         {
           weeklycards.push(
-            <div key={i} className="card2">
-            <h2 className="weekday">Day</h2>
-            <h2 className="weekdate1">Date</h2>
-            <h2 className="weekemoji">⛅️</h2>
-            <h2 className="maxtemp4">___&deg;</h2>
-            <h2 className="mintemp4">___&deg;</h2>
+            <div key={i} className={i>5 ? "card32":"card128"}>
+            <h2 className="weekday1"></h2>
+            <h2 className="weekdate1"></h2>
+            <h2 className="weekemoji12832"></h2>
+            <h2 className="maxtemp4"></h2>
            </div>
        
        

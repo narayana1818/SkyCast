@@ -1,7 +1,8 @@
 import React,{useContext,useEffect,useState} from 'react'
 import {Weathercontext,usecontext} from '../context/Weathercontext';
 import '../styling/temperature.css'
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const Temperature = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
    
@@ -97,19 +98,16 @@ console.log(isMobile)
      </div>
 ):(
     <div className="temperature1"  >
-      
      <div className="temperaturecity">
-     <h4 className="cityname1">📍Location Unavailable</h4>
-     <h4 className="dateday1">Search a city or enable location</h4>
+     <div className="citySkeleton"></div>
      </div>
      <div className="temperature">
-     <h2 className="degrees1">___<span>&deg;C</span> </h2>
-     <h2 className="highlow1"> Feels like:___<span style={{paddingLeft:"15px"}}>High: ___</span> <span style={{paddingLeft:"20px"}}>Low:___</span></h2>
+     <div className="tempSkeleton"></div>
      </div>
 
      <div className="tempdivattributes">
-      <h2 className="uvattribute1">UV : ___</h2>
-      <h2 className="rainattribute1">Rain:___ <span>%</span></h2>
+     <div className="rainSkeleton"></div>
+     <div className="uvSkeleton"></div>
      </div>
      </div>
      

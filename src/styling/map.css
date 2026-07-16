@@ -6,11 +6,41 @@
     border-radius: 20px;
      
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
   
-
+overflow: hidden;
+position: relative;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+.map2::after {
+
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -40%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, .35),
+          transparent) !important;
+  animation: flow 2.4s linear infinite;
+}
+@keyframes flow {
+  from {
+      left: -200px;
+      bottom: -300px;
+  }
+
+  to {
+      left: 300px;
+      bottom: 150px;
+  }
 
 }
 .map{
@@ -22,6 +52,9 @@
     width: 100%;
     height: 100%;
     
+overflow: hidden;
+position: relative;
+  
 }
 .map1{
     width: 100%;
@@ -61,11 +94,13 @@ font-family: 'Inter', sans-serif;
       width: 97%;
       height: 27%;
       border-radius: 20px;
-      background:none;
-      backdrop-filter: blur(0px);
+      background: rgba(255, 255, 255, .002);
+      backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(0px); 
-      border:none;
-      box-shadow:none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+     
   
   }
   .map{

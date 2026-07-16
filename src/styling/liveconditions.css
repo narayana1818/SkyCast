@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-.liveconditionsdiv{
+
+.liveconditionsdiv {
     width: 88%;
     height: 30%;
     border-radius: 20px;
-     
+
     background: rgba(255, 255, 255, .003);
     backdrop-filter: blur(10px);
 
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-            rgba(0, 0, 0, 0.23) 0px 3px 6px;
-                isolation:isolate;
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    isolation: isolate;
 }
-.currentconditions{
+
+.currentconditions {
     width: 100%;
     height: 100%;
 
 }
-.liveconditionstext{
+.currentcondition1 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.liveconditionstext {
     margin: 0;
     color: lightgray;
     opacity: 0.8;
@@ -25,9 +34,10 @@
     padding-left: 20px;
     padding-top: 10px;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
 }
-.cards3
-{
+
+.cards3 {
     margin-top: 15px;
     width: 100%;
     height: 30%;
@@ -37,75 +47,113 @@
     border-top: 1px solid white;
     animation: waveText 1s ease-in-out;
 }
-.cards4
-{
+
+.cards4 {
     margin-top: 15px;
     width: 100%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    height: 80%;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     border-top: 1px solid white;
-    
+    overflow: hidden;
+    position: relative;
+
+}
+.cards4::after {
+
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -40%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent) !important;
+    animation: flow 1.5s linear infinite;
+}
+@keyframes flow {
+    from {
+        left: -100px;
+        bottom: -300px;
+    }
+
+    to {
+        left: 300px;
+        bottom: 150px;
+    }
+
 }
 
-.humidity 
-{
+.humidity {
     height: 85%;
-color: white;
-font-size: 16px;
-text-align: center;
-align-content: center;
-border-right: 1px solid white;
-font-family: 'Inter', sans-serif;
-width: 30%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    border-right: 1px solid white;
+    font-family: 'Inter', sans-serif;
+    width: 30%;
 
 }
-.wind
-{ height: 85%;
+
+.wind {
+    height: 85%;
     width: 30%;
-color: white;
-font-size: 16px;
-text-align: center;
-align-content: center;
-border-right: 1px solid white;
-font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    border-right: 1px solid white;
+    font-family: 'Inter', sans-serif;
 
 }
-.pressure
-{
+
+.pressure {
     width: 30%;
-color: white;
-font-size: 16px;
-text-align: center;
-align-content: center;
-font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    font-family: 'Inter', sans-serif;
 }
-.humiditytext{
+
+.humiditytext {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
 }
-.humidityvalue{
+
+.humidityvalue {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
 }
-.windtext{
+
+.windtext {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
 }
-.windvalue{
+
+.windvalue {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
 }
-.pressuretext{
+
+.pressuretext {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
 }
-.pressurevalue{
+
+.pressurevalue {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
 }
-.sunsetsunrise{
+
+.sunsetsunrise {
 
     width: 100%;
     height: 40%;
@@ -114,16 +162,18 @@ font-family: 'Inter', sans-serif;
     justify-content: space-evenly;
     animation: waveText 1s ease-in-out;
 }
-.sunsetsunrise1{
+
+.sunsetsunrise1 {
 
     width: 100%;
     height: 40%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+
 }
-.sunrise{
+
+.sunrise {
     width: 50%;
     height: 100%;
     text-align: center;
@@ -132,7 +182,8 @@ font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
 }
-.sunset{
+
+.sunset {
     width: 50%;
     height: 100%;
     text-align: center;
@@ -141,92 +192,103 @@ font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
 }
-.sunrisetext{
+
+.sunrisetext {
     font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
     margin: 0;
 
 }
-.sunemoji{
+
+.sunemoji {
     font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
     margin: 0;
 }
-.sunrisevalue{
+
+.sunrisevalue {
     font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
     margin: 0;
 }
-.sunsettext{
+
+.sunsettext {
     font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
     margin: 0;
 }
-.moonemoji{
+
+.moonemoji {
     font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
     margin: 0;
 }
-.sunsetvalue{
+
+.sunsetvalue {
     font-family: 'Inter', sans-serif;
     color: white;
     font-size: 17px;
     margin: 0;
 }
+
 @keyframes waveText {
     0% {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
-  
+
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
+
 @media screen and (max-width:425px) {
-    .liveconditionsdiv{
+    .liveconditionsdiv {
         width: 97%;
         height: 30%;
         border-radius: 20px;
         background: rgba(255, 255, 255, .003);
         backdrop-filter: blur(10px);
-    
+
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-                rgba(0, 0, 0, 0.23) 0px 3px 6px;
-                isolation:isolate;
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        isolation: isolate;
     }
-    .currentconditions{
+
+    .currentconditions {
         width: 100%;
         height: 100%;
-    
+
     }
-    .currentcondition1{
+
+    .currentcondition1 {
         width: 100%;
         height: 100%;
-    
+
     }
-    .liveconditionstext{
+
+    .liveconditionstext {
         margin: 0;
-        color:white;
-        opacity:1;
+        color: white;
+        opacity: 1;
         font-size: 14px;
         padding-left: 14px;
         padding-top: 10px;
         font-family: 'Inter', sans-serif;
     }
-    .cards3
-    {
+
+    .cards3 {
         margin-top: 15px;
         width: 100%;
         height: 30%;
@@ -236,76 +298,85 @@ font-family: 'Inter', sans-serif;
         border-top: 1px solid white;
         animation: waveText 1s ease-in-out;
     }
-    .cards4
-    {
+
+    .cards4 {
         margin-top: 15px;
         width: 100%;
-        height: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        height: 80%;
+        border-radius: 18px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
         border-top: 1px solid white;
-        
-    }
+        overflow: hidden;
+        position: relative;
     
-    .humidity 
-    {
+    }
+
+    .humidity {
         height: 85%;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    align-content: center;
-    border-right: 1px solid white;
-    font-family: 'Inter', sans-serif;
-    width: 30%;
-    
-    }
-    .wind
-    { height: 85%;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        align-content: center;
+        border-right: 1px solid white;
+        font-family: 'Inter', sans-serif;
         width: 30%;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    align-content: center;
-    border-right: 1px solid white;
-    font-family: 'Inter', sans-serif;
-    
+
     }
-    .pressure
-    {
+
+    .wind {
+        height: 85%;
         width: 30%;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    align-content: center;
-    font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        align-content: center;
+        border-right: 1px solid white;
+        font-family: 'Inter', sans-serif;
+
     }
-    .humiditytext{
+
+    .pressure {
+        width: 30%;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        align-content: center;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .humiditytext {
         font-size: 15px;
         font-family: 'Inter', sans-serif;
     }
-    .humidityvalue{
+
+    .humidityvalue {
         font-size: 16px;
         font-family: 'Inter', sans-serif;
     }
-    .windtext{
+
+    .windtext {
         font-size: 15px;
         font-family: 'Inter', sans-serif;
     }
-    .windvalue{
+
+    .windvalue {
         font-size: 16px;
         font-family: 'Inter', sans-serif;
     }
-    .pressuretext{
+
+    .pressuretext {
         font-size: 15px;
         font-family: 'Inter', sans-serif;
     }
-    .pressurevalue{
+
+    .pressurevalue {
         font-size: 16px;
         font-family: 'Inter', sans-serif;
     }
-    .sunsetsunrise{
-    
+
+    .sunsetsunrise {
+
         width: 100%;
         height: 40%;
         display: flex;
@@ -314,16 +385,18 @@ font-family: 'Inter', sans-serif;
         justify-content: space-between;
         animation: waveText 1s ease-in-out;
     }
-    .sunsetsunrise1{
-    margin-top: 15px;
+
+    .sunsetsunrise1 {
+        margin-top: 15px;
         width: 100%;
         height: 40%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        
+
     }
-    .sunrise{
+
+    .sunrise {
         width: 50%;
         height: 100%;
         text-align: center;
@@ -332,7 +405,8 @@ font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
     }
-    .sunset{
+
+    .sunset {
         width: 50%;
         height: 100%;
         text-align: center;
@@ -341,60 +415,67 @@ font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
     }
-    .sunrisetext{
+
+    .sunrisetext {
         font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
         margin: 0;
-    
+
     }
-    .sunemoji{
-        font-family: 'Inter', sans-serif;
-        color: white;
-        font-size: 17px;
-        margin: 0;
-        margin-top: 4px;
-    }
-    .sunrisevalue{
-        font-family: 'Inter', sans-serif;
-        color: white;
-        font-size: 17px;
-        margin: 0;
-        margin-top: 8px;
-    }
-    .sunsettext{
-        font-family: 'Inter', sans-serif;
-        color: white;
-        font-size: 17px;
-        margin: 0;
-    }
-    .moonemoji{
+
+    .sunemoji {
         font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
         margin: 0;
         margin-top: 4px;
     }
-    .sunsetvalue{
+
+    .sunrisevalue {
         font-family: 'Inter', sans-serif;
         color: white;
         font-size: 17px;
         margin: 0;
         margin-top: 8px;
     }
+
+    .sunsettext {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .moonemoji {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+        margin-top: 4px;
+    }
+
+    .sunsetvalue {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 0;
+        margin-top: 8px;
+    }
+
     @keyframes waveText {
         0% {
-          opacity: 0;
-          transform: translateY(20px);
+            opacity: 0;
+            transform: translateY(20px);
         }
-      
+
         50% {
-          transform: translateY(-10px);
+            transform: translateY(-10px);
         }
-      
+
         100% {
-          opacity: 1;
-          transform: translateY(0);
+            opacity: 1;
+            transform: translateY(0);
         }
-      }
+    }
 }

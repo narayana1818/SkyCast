@@ -10,10 +10,9 @@ for (let i = 0; i < 8; i++)
 {
   hourlyCards.push(
     <div key={i} className="card1">
-     <h2 className="time">AM/PM</h2>
-     <h2 className="emoji">⛅️</h2>
-     <h2 className="temp">__</h2>
-     <h2 className="rainchance">💧%</h2>
+     <h2 className="time1"></h2>
+     <h2 className="emoji128"></h2>
+     <h2 className="temp1"></h2>
     </div>
   );
 }
