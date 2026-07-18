@@ -13,7 +13,6 @@ export default function Sunset(){
             <div className="bird b2"></div>
             <div className="bird b3"></div>
 
-            <div className="sunset-hills"></div>
 
             <div className="sunset-scrim"></div>
 

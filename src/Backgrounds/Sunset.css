@@ -85,20 +85,20 @@
 .b1 {
   left: 60%;
   top: 14%;
-  animation: flyAcross 34s linear infinite reverse;
+  animation: flyAcross 20s linear infinite reverse;
 }
 
 .b2 {
   left: 64%;
   top: 18%;
-  animation: flyAcross 34s linear infinite reverse;
+  animation: flyAcross 24s linear infinite reverse;
   animation-delay: .6s;
 }
 
 .b3 {
   left: 70%;
   top: 20%;
-  animation: flyAcross 40s linear infinite reverse;
+  animation: flyAcross 20s linear infinite reverse;
   animation-delay: 4s;
 }
 

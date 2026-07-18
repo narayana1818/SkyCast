@@ -23,7 +23,7 @@ import Sunset from "./Backgrounds/Sunset";
 import Storm from "./Backgrounds/Storm";
 import LightClouds from "./Backgrounds/Lightclouds";
 const App = () => {
-  const [currentBg, setCurrentBg] = useState(() => Clouds);
+  const [currentBg, setCurrentBg] = useState(() => LightClouds);
   const [nextBg, setNextBg] = useState(null);
   const[city,setCity]=useState({name:null,state:null,country:null})
   const[loading,setLoading]=useState(true);

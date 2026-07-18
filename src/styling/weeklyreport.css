@@ -107,7 +107,9 @@ margin-top: -10px;
     0 0 20px rgba(255,255,255,0.12);
     color: lightgray;
 }
-
+.weekemoji{
+    font-size: 20px;
+}
 .card128{
 
     height: 180px;
@@ -351,6 +353,7 @@ margin-left: -6px;
     align-items: center;
     flex-direction: column;
     }
+   
 .card2
 {
     width:100%;
@@ -493,7 +496,7 @@ justify-content:flex-start;
 }
 .weekemoji{
    margin-left: 15px;
-    font-size:25px;
+    font-size:30px;
     
 }
 .rainprobabilitydiv{

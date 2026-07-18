@@ -1,7 +1,7 @@
 import React,{useContext,useEffect,useState} from 'react'
 import '../styling/liveconditions.css'
 import {Weathercontext} from '../context/Weathercontext'
-
+import { motion } from "motion/react";
 const Liveconditions = () => {
   const{tempData,aqiData,city}=useContext(Weathercontext);
   let sunrisetime=0;
@@ -70,7 +70,7 @@ const Liveconditions = () => {
       </div>
     <div className="sunsetsunrise" key={tempData.daily.sunrise[0]}>
       <div className="sunrise">
-        <h2 className="sunemoji">☀️</h2>
+        <h2 className="sunemoji"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><title xmlns="">sun</title><path fill="#ffac33" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2z"/><circle cx="18" cy="18" r="10" fill="#ffac33"/></svg></h2>
         <h2 className="sunrisevalue">{sunrisetime}</h2>
       </div>
 
@@ -90,21 +90,34 @@ const Liveconditions = () => {
       strokeWidth="6"
       strokeLinecap="round"
     />
-
-    <text
-      x={sunX}
-      y={sunY}
-      fontSize="22"
-      textAnchor="middle"
-      dominantBaseline="middle"
-    >
-      ☀️
-    </text>
-    <line x1="30" y1="105" x2="265" y2="105" strokeWidth="3"  stroke="white"  strokeDasharray="4 6" />
-  </svg>
+     <motion.g  animate={{ x: sunX - 11, y: sunY - 11,rotate:360, }}
+  transition={{
+    x: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    },
+    y: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    },
+    rotate: {
+      duration: 36000,
+      repeat: Infinity,
+      ease: "linear",
+    },
+  }}>
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" fontSize="22"><title xmlns="">sun</title><path fill="#ffac33" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2z"/><circle cx="18" cy="18" r="10" fill="#ffac33"/></svg>
+  
+</motion.g>
+<line x1="30" y1="105" x2="265" y2="105" strokeWidth="3"  stroke="white"  strokeDasharray="4 6" />
+</svg>
+   
 </div>
       <div className="sunset">
-        <h2 className="moonemoji">🌕</h2>
+        <h2 className="moonemoji"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><title xmlns="">full-moon</title><circle cx="18" cy="18" r="18" fill="#ffd983"/><g fill="#ffcc4d"><circle cx="10.5" cy="8.5" r="3.5"/><circle cx="20" cy="17" r="3"/><circle cx="24.5" cy="28.5" r="3.5"/><circle cx="22" cy="5" r="2"/><circle cx="3" cy="18" r="1"/><circle cx="30" cy="9" r="1"/><circle cx="15" cy="31" r="1"/><circle cx="32" cy="19" r="2"/><circle cx="10" cy="23" r="2"/></g></svg></h2>
         <h2 className="sunsetvalue">{sunsettime}</h2>
       </div>
        </div>

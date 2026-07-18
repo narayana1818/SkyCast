@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Weathercontext } from "../context/Weathercontext";
+import { motion } from "motion/react";
 import "../styling/aqidropdown.css";
 const AqiDropDown = () => {
 
