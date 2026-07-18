@@ -22,7 +22,6 @@ import Sunrise from "./Backgrounds/Sunrise";
 import Sunset from "./Backgrounds/Sunset";
 import Storm from "./Backgrounds/Storm";
 import LightClouds from "./Backgrounds/Lightclouds";
-
 const App = () => {
   const [currentBg, setCurrentBg] = useState(() => Clouds);
   const [nextBg, setNextBg] = useState(null);

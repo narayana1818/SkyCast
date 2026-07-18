@@ -1,9 +1,9 @@
 .dropdown{
     width: 200px;
     height: 260px;
-    background: rgba(33,41,59,.88);
-    backdrop-filter: blur(40px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(15, 23, 42, 1);
+    backdrop-filter: blur(100px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
             rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius:16px;
@@ -12,8 +12,8 @@
     position:absolute;
     align-items: center;
     z-index: 999;
-    top: -30px;
-    left: 298px;
+    top: -7px;
+    left: 296px;
     overflow-y:auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -23,7 +23,8 @@
     min-height: 40px;
     display: flex;
     align-items: center;
-    border-bottom:1px solid rgba(255,255,255,.08);
+  
+  border-bottom: 1px solid rgba(255,255,255,0.06);
     justify-content: space-evenly;
     box-sizing: border-box;
 }
@@ -35,8 +36,8 @@
     align-items: center;
     justify-content: center;
     font-size: 17px;
-    color:#8BC5FF;
-    border-right:1px solid rgba(255,255,255,.08);
+    color:#93C5FD;
+    border-right:1px solid rgba(255,255,255,0.06);
     font-weight:700;
     
 }
@@ -47,8 +48,8 @@
     align-items: center;
     justify-content: center;
     font-size: 17px;
-    color:#8BC5FF;
-    border-right:1px solid rgba(255,255,255,.08);
+    color:#93C5FD;
+    border-right:1px solid rgba(255,255,255,0.06);
     font-weight:700;
     
 }
@@ -59,8 +60,8 @@
     align-items: center;
     justify-content: center;
     font-size: 17px;
-    color:#8BC5FF;
-    border-right:1px solid rgba(255,255,255,.08);
+    color:#93C5FD;
+    
     font-weight:700;
     
 }
@@ -70,70 +71,72 @@
    flex-shrink: 0;
    display: flex;
    align-items: center;
-   border-bottom:1px solid rgba(255,255,255,.08);
+    background: (255,255,255,0.03);
+   border-bottom: 1px solid rgba(255,255,255,0.06);
    box-sizing: border-box;
    justify-content: space-evenly;
 }
 .aqidropdowntime{
     width: 33%;
-    font-size: 15px;
+    font-size: 13px;
     height: 100%;
     display: flex;
-    color:#eef4ff;
-    font-weight: 400;
-    border-right:1px solid rgba(255,255,255,.08);
+    color:#F1F5F9;
+    font-weight:bolder;
+    border-right:1px solid rgba(255,255,255,0.06) ;
     align-items: center;
     justify-content: center;
 }
 .aqidropdownpm2_5{
     width: 33%;
     height: 100%;
-    font-size: 15px;
-    color:#eef4ff;
-    font-weight: 400;
+    font-size: 13px;
+    color:#F1F5F9;
+    font-weight: bolder;
     display: flex;
-    border-right:1px solid rgba(255,255,255,.08);
+    border-right:1px solid rgba(255,255,255,0.06) ;
     align-items: center;
     justify-content: center;
 }
 .aqidropdownpm10{
     width: 33%;
     height: 100%;
-    font-size: 15px;
+    font-size: 13px;
     display: flex;
-    color:#eef4ff;
-    font-weight: 400;
+    color:#F1F5F9;
+    font-weight:bolder;
+    border-right: 0px;
     align-items: center;
-    
     justify-content: center;
 }
 @media screen and (max-width:425px) {
     .dropdown{
         width: 200px;
         height: 260px;
-        background: rgba(33,41,59,.88);
-        backdrop-filter: blur(40px);
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: rgba(15, 23, 42, 1);
+        backdrop-filter: blur(100px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
         border-radius:16px;
         display: flex;
         flex-direction: column;
         position:absolute;
         align-items: center;
         z-index: 999;
-        top: -30px;
-        left: 170px;
+        top: -10px;
+        left: 173px;
         overflow-y:auto;
         overflow-x: hidden;
         scroll-behavior: smooth;
     }
-    .rowheading{
+    .rowheading
+    {
         width: 100%;
         min-height: 40px;
         display: flex;
         align-items: center;
-        border-bottom:1px solid rgba(255,255,255,.08);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
         justify-content: space-evenly;
         box-sizing: border-box;
     }
@@ -146,7 +149,7 @@
         justify-content: center;
         font-size: 17px;
         color:#8BC5FF;
-        border-right:1px solid rgba(255,255,255,.08);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
         font-weight:700;
         
     }
@@ -170,49 +173,52 @@
         justify-content: center;
         font-size: 17px;
         color:#8BC5FF;
-        border-right:1px solid rgba(255,255,255,.08);
+        
         font-weight:700;
         
     }
-    .aqiRow{
-        width: 100%;
+    .aqiRow
+    { 
+       width: 100%;
        min-height: 40px;
        flex-shrink: 0;
        display: flex;
        align-items: center;
-       border-bottom:1px solid rgba(255,255,255,.08);
+       border-bottom: 1px solid rgba(255,255,255,0.06);
        box-sizing: border-box;
        justify-content: space-evenly;
     }
-    .aqidropdowntime{
+    .aqidropdowntime
+    {
         width: 33%;
-        font-size: 15px;
+        font-size: 13px;
         height: 100%;
         display: flex;
         color:#eef4ff;
-        font-weight: 400;
-        border-right:1px solid rgba(255,255,255,.08);
+        font-weight: bolder;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
         align-items: center;
         justify-content: center;
     }
-    .aqidropdownpm2_5{
+    .aqidropdownpm2_5
+    {
         width: 33%;
         height: 100%;
-        font-size: 15px;
+        font-size: 14px;
         color:#eef4ff;
-        font-weight: 400;
+        font-weight:bolder;
         display: flex;
-        border-right:1px solid rgba(255,255,255,.08);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
         align-items: center;
         justify-content: center;
     }
     .aqidropdownpm10{
         width: 33%;
         height: 100%;
-        font-size: 15px;
+        font-size: 14px;
         display: flex;
         color:#eef4ff;
-        font-weight: 400;
+        font-weight:bolder;
         align-items: center;
         
         justify-content: center;
