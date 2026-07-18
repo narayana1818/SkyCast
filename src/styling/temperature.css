@@ -634,6 +634,8 @@
         height: 47%;
         margin: 0;
         padding: 0;
+        position: sticky;
+        top: 3%;
         text-align: center;
     }
 
