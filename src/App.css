@@ -307,17 +307,15 @@ z-index: 999;
         
         }
 }
-@media screen and (min-width:321px) and (max-width:425px) {
-  .bg{
-
+@media screen and (min-width:321px) and (max-width:440px)
+ {
+  .bg
+  {
     position:absolute;
     inset:0;
-    
     width:100%;
     height:100%;
-    
     z-index:-1;
-    
     }
     .bg.show{
 

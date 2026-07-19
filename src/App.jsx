@@ -35,7 +35,7 @@ const App = () => {
 const [nextBackground, setNextBackground] = useState(null);
 const [fading, setFading] = useState(false);
 const [sliding, setSliding] = useState(false);
-   const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
+   const [isMobile, setIsMobile] = useState(window.innerWidth <= 445);
 const inputref=useRef("");
    useEffect( ()=>{
     setError(false);
@@ -85,7 +85,7 @@ const inputref=useRef("");
 
     useEffect(() => {
         const handleResize = () => {
-          setIsMobile(window.innerWidth <= 425);
+          setIsMobile(window.innerWidth <= 445);
         };
       
         window.addEventListener("resize", handleResize);

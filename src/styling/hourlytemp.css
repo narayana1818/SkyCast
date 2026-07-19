@@ -190,7 +190,7 @@ overflow: hidden;
 
 
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:440px) {
     .hourlydiv {
         width: 97%;
         height: 20%;

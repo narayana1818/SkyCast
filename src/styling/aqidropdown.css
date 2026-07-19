@@ -109,7 +109,7 @@
     align-items: center;
     justify-content: center;
 }
-@media screen and (max-width:425px) {
+@media screen and (max-width:440px) {
     .dropdown{
         width: 200px;
         height: 260px;
