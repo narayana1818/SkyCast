@@ -13,9 +13,7 @@ export default function Sunrise(){
             <div className="bird b2"></div>
             <div className="bird b3"></div>
 
-            <div className="sunrise-hills"></div>
-
-            <div className="sunrise-scrim"></div>
+          
 
         </div>
 
