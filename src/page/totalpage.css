@@ -30,12 +30,12 @@
 {
  .totalpage{
         margin: 0;
-        height: 1710px;
+        height: 1750px;
         width: 100%;
         display: flex;
         flex-direction: column;
        align-items: center;
-       justify-content:space-evenly;
+       justify-content:space-between;
       
     }
 

@@ -1,7 +1,7 @@
 .rain-bg{
     position:absolute;
     inset:0;
-    height: 1760px;
+    height: 1800px;
     width: 100%;
     overflow:hidden;
     background:linear-gradient(#485563,#29323c);

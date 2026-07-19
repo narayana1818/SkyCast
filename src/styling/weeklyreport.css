@@ -300,11 +300,12 @@ margin-left: -6px;
     height: 40%;
     border-radius: 20px;
      background:none;
-     border: none;
+     border:none;
+     box-sizing: border-box;
     backdrop-filter: blur(0px);
     box-shadow: none;
-    margin-top: 25px;
-  
+    margin-top: 0px;
+
 }
 .weekdate1{
     margin: 0;
