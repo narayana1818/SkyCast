@@ -156,10 +156,10 @@
     height: 120px;
     width: 300px;
   display: flex;
-
   align-items: flex-start;
   justify-content: flex-start;
     box-sizing: border-box;
+    margin-top: -20px;
 }
 
 .sunsetsunrise {

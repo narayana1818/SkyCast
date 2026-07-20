@@ -90,7 +90,7 @@ const Liveconditions = () => {
       strokeWidth="6"
       strokeLinecap="round"
     />
-     <motion.g  animate={{ x: sunX - 11, y: sunY - 11,rotate:360, }}
+     <motion.g  animate={{ x: sunX - 11, y: sunY - 11,rotate:360,}}
   transition={{
     x: {
       type: "spring",
@@ -106,6 +106,7 @@ const Liveconditions = () => {
       duration: 36000,
       repeat: Infinity,
       ease: "linear",
+      delay:0.6,
     },
   }}>
  

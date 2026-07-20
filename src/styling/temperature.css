@@ -597,6 +597,7 @@
         background: none;
         backdrop-filter: blur(0px);
         border:none;
+        border:0;
         box-sizing: border-box;
         box-shadow: none;
         border-radius: 0px;

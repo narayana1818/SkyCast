@@ -592,7 +592,7 @@
                         padding-left: 0px;
                         padding-top: 5px;
                         display: grid;
-                        gap: 15px;
+                        gap: 0px;
                         grid-template-columns: 92px 92px;
                 }
                 
@@ -606,7 +606,7 @@
                 
                 .co {
                         width: 90%;
-                        height: 100%;
+                        height: 90%;
                         background: none;
                         border: none;
                         box-shadow:none;
@@ -632,7 +632,7 @@
                 
                 .o3 {
                         width: 90%;
-                        height: 100%;
+                        height: 90%;
                         background: none;
                         border: none;
                         border: 1px solid white;
@@ -658,7 +658,7 @@
                 
                 .no2 {
                         width: 90%;
-                        height: 100%;
+                        height: 90%;
                         background: none;
                         border: none;
                         border: 1px solid white;
@@ -686,7 +686,7 @@
                 
                 .so2 {
                         width: 90%;
-                        height: 100%;
+                        height: 90%;
                         background: none;
                         border: none;
                         box-shadow:none;

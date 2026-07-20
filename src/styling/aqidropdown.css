@@ -13,7 +13,7 @@
     align-items: center;
     z-index: 999;
     top: -7px;
-    left: 296px;
+    left: 290px;
     overflow-y:auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -125,7 +125,7 @@
         align-items: center;
         z-index: 999;
         top: -10px;
-        left: 180px;
+        left: 185px;
         overflow-y:auto;
         overflow-x: hidden;
         scroll-behavior: smooth;
