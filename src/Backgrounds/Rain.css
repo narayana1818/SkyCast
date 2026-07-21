@@ -2,7 +2,7 @@
     position:absolute;
     inset:0;
     width:100%;
-    height:1860px;
+    height:1880px;
     overflow:hidden;
     background:linear-gradient(#485563,#29323c);
     z-index:-1;
@@ -104,7 +104,7 @@
 @media screen and (max-width:320px){
 
 .rain-bg{
-    height:1860px;
+    height:1880px;
 }
 
 .drop{

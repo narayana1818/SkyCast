@@ -145,7 +145,7 @@
 
 @media screen and (min-width:321px) and (max-width:435px) {
   .sunset-bg {
-    height: 1860px;
+    height: 1880px;
   }
 
   .sunset-sun {
@@ -162,7 +162,7 @@
   .sunset-bg {
     position: absolute;
     inset: 0;
-    height: 1860px;
+    height: 1880px;
     width: 100%;
     overflow: hidden;
     z-index: -1;

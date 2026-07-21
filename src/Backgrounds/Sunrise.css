@@ -153,13 +153,13 @@
     }
 
     to {
-        transform: translateX(85vw) translateY(0);
+        transform: translateX(100vw) translateY(0);
     }
 }
 
 @media screen and (max-width:480px) {
     .sunrise-bg {
-        height: 1860px;
+        height: 1880px;
     }
 
     .sunrise-sun {
@@ -174,7 +174,7 @@
 
 @media screen and (max-width:320px) {
     .sunrise-bg {
-        height: 1860px;
+        height: 1880px;
     }
 
     .sunrise-sun {

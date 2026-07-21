@@ -2,7 +2,7 @@
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 1760px;
+    height: 1880px;
     overflow: hidden;
     z-index: -1;
 
@@ -303,7 +303,7 @@
 @media screen  and (min-width:321px) and (max-width:435px) {
 
     .sunny-bg {
-        height: 1860px;
+        height: 1880px;
     }
 
 
@@ -323,7 +323,7 @@
 @media screen and (max-width:320px) {
 
     .sunny-bg {
-        height: 1860px;
+        height: 1880px;
     }
 
     .sun-glow {
