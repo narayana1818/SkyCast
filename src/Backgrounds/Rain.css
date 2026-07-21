@@ -1,126 +1,132 @@
-
 .rain-bg{
     position:absolute;
     inset:0;
-    height: 1800px;
-    width: 100%;
+    width:100%;
+    height:1860px;
     overflow:hidden;
     background:linear-gradient(#485563,#29323c);
     z-index:-1;
-    }
-    
-    .drop{
+}
+
+.drop{
     position:absolute;
     top:-20px;
     width:2px;
     height:18px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
     background:white;
-    opacity:.7;
+    opacity:.75;
+    border-radius:10px;
     animation:rain linear infinite;
-    }
-    
-    @keyframes rain{
-    
+}
+
+@keyframes rain{
+
     to{
-    transform:translateY(60vh);
-    }
-    
+        transform:translateY(60vh);
     }
 
-    .splash{
+}
+
+.splash{
+
     position:absolute;
     top:calc(60vh - 3px);
-    width:8px;
-    height:8px;
-    margin-left:-3px;
+    width:10px;
+    height:3px;
+    margin-left:-5px;
     border-radius:50%;
-    border:1.5px solid rgba(255,255,255,0.8);
-    opacity:0;
-    animation:splash-ring linear infinite;
-    }
+    background:rgba(255,255,255,.85);
 
-    @keyframes splash-ring{
+    opacity:0;
+
+    animation:splash-ring .45s ease-out forwards;
+
+}
+
+@keyframes splash-ring{
+
     0%{
         opacity:0;
-        transform:scale(0.3);
+        transform:scale(.2);
     }
-    15%{
-        opacity:.8;
-        transform:scale(0.5);
+
+    30%{
+        opacity:1;
+        transform:scale(.9);
     }
-    60%{
-        opacity:.4;
-        transform:scale(1.4);
-    }
+
     100%{
         opacity:0;
         transform:scale(1.8);
     }
-    }
 
-    @media screen and (max-width:320px) {
-        .rain-bg{
-            position:absolute;
-            inset:0;
-            height: 1860px;
-            width: 100%;
-            overflow:hidden;
-            background:linear-gradient(#485563,#29323c);
-            z-index:-1;
-            }
-            
-            .drop{
-            position:absolute;
-            top:-20px;
-            width:2px;
-            height:18px;
-            background:white;
-            opacity:.7;
-            animation:rain linear infinite;
-            }
-            
-            @keyframes rain{
-            
-            to{
-            transform:translateY(60vh);
-            }
-            
-            }
+}
 
-            .splash{
-            position:absolute;
-            top:calc(60vh - 2.5px);
-            width:6px;
-            height:6px;
-            margin-left:-2.5px;
-            border-radius:50%;
-            border:1px solid rgba(255,255,255,0.8);
-            opacity:0;
-            animation:splash-ring linear infinite;
-            }
+.particle{
 
-            @keyframes splash-ring{
-            0%{
-                opacity:0;
-                transform:scale(0.3);
-            }
-            15%{
-                opacity:.8;
-                transform:scale(0.5);
-            }
-            60%{
-                opacity:.4;
-                transform:scale(1.4);
-            }
-            100%{
-                opacity:0;
-                transform:scale(1.8);
-            }
-            }
+    position:absolute;
+    top:60vh;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
 
+    opacity:0;
 
+    animation:particle .55s ease-out forwards;
 
+}
+
+@keyframes particle{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+        translate(0,0)
+        scale(1);
 
     }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(.3);
+
+    }
+
+}
+
+@media screen and (max-width:320px){
+
+.rain-bg{
+    height:1860px;
+}
+
+.drop{
+
+    width:2px;
+    height:16px;
+
+}
+
+.splash{
+
+    width:7px;
+    height:2px;
+    margin-left:-3.5px;
+
+}
+
+.particle{
+
+    width:2px;
+    height:2px;
+
+}
+
+}

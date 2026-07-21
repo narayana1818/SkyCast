@@ -224,18 +224,7 @@ const Aqi = () => {
             <h2 className="aqiguagetext">AQI GUAGE📈</h2>
           </div>
           <div className="aqiresult">
-            <div className="co">
-             
-            </div>
-            <div className="o3">
-            
-            </div>
-            <div className="no2">
-              
-            </div>
-            <div className="so2">
-              
-            </div>
+          
           </div>
          
         </div>

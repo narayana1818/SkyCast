@@ -1,34 +1,74 @@
-import React,{useContext} from 'react'
-import {Weathercontext} from '../context/Weathercontext'
-import '../styling/map.css'
-const Map = () => {
+import React, { useContext, useEffect } from "react";
+import { Weathercontext } from "../context/Weathercontext";
+import "../styling/map.css";
 
-  const{tempData,city}=useContext(Weathercontext);
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+} from "react-leaflet";
+
+import L from "leaflet";
+
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
+function ChangeView({ lat, lng }) {
+  const map = useMap();
+
+  useEffect(() => {
+    map.setView([lat, lng], map.getZoom(), {
+      animate: true,
+    });
+  }, [lat, lng, map]);
+
+  return null;
+}
+const WeatherMap = () => {
+  const { tempData } = useContext(Weathercontext);
+
   return (
     <div className="mapdiv">
+      {tempData ? (
+        <div className="map">
+          <MapContainer
+            center={[tempData.latitude, tempData.longitude]}
+            zoom={13}
+            scrollWheelZoom={true}
+            style={{ width: "100%", height: "100%" }}
+          >
+            <ChangeView
+              lat={tempData.latitude}
+              lng={tempData.longitude}
+            />
 
-{
-  tempData?(
-    <div className="map">
- <iframe   key={`${tempData.latitude}-${tempData.longitude}`} className="map1" src ={`https://maps.google.com/maps?q=${tempData.latitude},${tempData.longitude}&z=13&output=embed`} style={{border:"0"}} loading="lazy">
- </iframe>
+            <TileLayer
+              attribution="&copy; OpenStreetMap contributors"
+              url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+            />
+
+            <Marker position={[tempData.latitude, tempData.longitude]}>
+              <Popup>{tempData.city || "Current Location"}</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
+      ) : (
+        <div className="map2">
+          <h2 className="maptext">📍 Location Unavailable</h2>
+        </div>
+      )}
     </div>
-  ):
-  (
+  );
+};
 
-    <div className="map2">
-
-<h2 className="maptext">📍Location Unavailable</h2>
-    </div>
-  )
-}
-
-
-
-
-    </div>
-
-  )
-}
-
-export default Map
+export default WeatherMap;
