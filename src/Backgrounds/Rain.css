@@ -1,3 +1,4 @@
+
 .rain-bg{
     position:absolute;
     inset:0;
@@ -27,6 +28,38 @@
     }
     
     }
+
+    .splash{
+    position:absolute;
+    top:calc(60vh - 3px);
+    width:8px;
+    height:8px;
+    margin-left:-3px;
+    border-radius:50%;
+    border:1.5px solid rgba(255,255,255,0.8);
+    opacity:0;
+    animation:splash-ring linear infinite;
+    }
+
+    @keyframes splash-ring{
+    0%{
+        opacity:0;
+        transform:scale(0.3);
+    }
+    15%{
+        opacity:.8;
+        transform:scale(0.5);
+    }
+    60%{
+        opacity:.4;
+        transform:scale(1.4);
+    }
+    100%{
+        opacity:0;
+        transform:scale(1.8);
+    }
+    }
+
     @media screen and (max-width:320px) {
         .rain-bg{
             position:absolute;
@@ -54,6 +87,37 @@
             transform:translateY(60vh);
             }
             
+            }
+
+            .splash{
+            position:absolute;
+            top:calc(60vh - 2.5px);
+            width:6px;
+            height:6px;
+            margin-left:-2.5px;
+            border-radius:50%;
+            border:1px solid rgba(255,255,255,0.8);
+            opacity:0;
+            animation:splash-ring linear infinite;
+            }
+
+            @keyframes splash-ring{
+            0%{
+                opacity:0;
+                transform:scale(0.3);
+            }
+            15%{
+                opacity:.8;
+                transform:scale(0.5);
+            }
+            60%{
+                opacity:.4;
+                transform:scale(1.4);
+            }
+            100%{
+                opacity:0;
+                transform:scale(1.8);
+            }
             }
 
 

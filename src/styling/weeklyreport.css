@@ -31,7 +31,7 @@
 .weeklycards{
     
     width: 100%;
-    height: 90%;
+    height: 85%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -40,7 +40,7 @@
 .weeklycards1{
     
     width: 100%;
-    height: 90%;
+    height: 85%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -299,9 +299,9 @@ margin-left: -6px;
     width: 97%;
     height: 40%;
     border-radius: 20px;
-     background:none;
-     border:none;
-     box-sizing: border-box;
+    background:none;
+    border:none;
+    box-sizing: border-box;
     backdrop-filter: blur(0px);
     box-shadow: none;
     margin-top: 0px;

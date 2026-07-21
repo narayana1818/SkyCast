@@ -277,7 +277,7 @@
 
 @media (max-width: 768px) {
     .cloud-bg {
-        height: 1800px;
+        height: 1850px;
     }
 
     .cloud {
@@ -300,7 +300,15 @@
         width: 85px;
         height: 36px;
     }
-
+    .cloud-bg {
+        height: 1860px;
+        width: 100%;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        z-index: -1;
+        background: linear-gradient(180deg, #3E4E68 0%, #5D7290 45%, #8FA3BC 100%);
+    }
     .wisp {
         width: 55px;
         height: 14px;

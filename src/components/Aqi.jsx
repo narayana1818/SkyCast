@@ -75,20 +75,82 @@ const Aqi = () => {
   const dashOff = ARC_LEN - p * ARC_LEN
   const rotate  = -90 + p * 180
 
+  const coColor  = aqiData?.hourly ? aqiCategory(subIndex(aqiData.hourly.carbon_monoxide?.[currentHour],  BP.co)).color  : '#8fa3c8'
+  const o3Color  = aqiData?.hourly ? aqiCategory(subIndex(aqiData.hourly.ozone?.[currentHour],             BP.o3)).color  : '#8fa3c8'
+  const no2Color = aqiData?.hourly ? aqiCategory(subIndex(aqiData.hourly.nitrogen_dioxide?.[currentHour],  BP.no2)).color : '#8fa3c8'
+  const so2Color = aqiData?.hourly ? aqiCategory(subIndex(aqiData.hourly.sulphur_dioxide?.[currentHour],   BP.so2)).color : '#8fa3c8'
+
   return (
 
-    <div className="aqidiv"     ref={aqiRef} onClick = {()=> setShowDropDown(!showDropDown)} >
+    <div className={isMobile ? "aqidivmobile" : "aqidiv"}     ref={aqiRef} onClick = {()=> setShowDropDown(!showDropDown)} >
        
-       {
-        showDropDown && (
-       <AqiDropDown/>
-)
-       }
+       
       {aqiData ? (
+
+        isMobile ? (
+
+          <div className="aqimobile" key={aqiData.hourly.carbon_monoxide[currentHour]}>
+
+            <div className="aqimobile-gaugerow">
+              <svg viewBox="0 0 200 118" width="130" height="77">
+                <defs>
+                  <linearGradient id="aqiGradMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%"   stopColor="#3a6fd8" />
+                    <stop offset="30%"  stopColor="#4dc89a" />
+                    <stop offset="55%"  stopColor="#f5c242" />
+                    <stop offset="75%"  stopColor="#e8923a" />
+                    <stop offset="100%" stopColor="#e8503a" />
+                  </linearGradient>
+                </defs>
+                <path d="M 16 105 A 84 84 0 0 1 184 105"
+                  fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="10" strokeLinecap="round" />
+                <path d="M 16 105 A 84 84 0 0 1 184 105"
+                  fill="none" stroke="url(#aqiGradMobile)" strokeWidth="10" strokeLinecap="round"
+                  strokeDasharray={ARC_LEN} strokeDashoffset={dashOff}
+                  style={{ transition: 'stroke-dashoffset 0.7s ease' }} />
+                <g transform={`rotate(${rotate} 100 105)`} style={{ transition: 'transform 0.7s ease' }}>
+                  <rect x="97.5" y="26" width="5" height="72" rx="2.5" fill="#fff" opacity="0.9" />
+                  <circle cx="100" cy="105" r="6" fill="#fff" />
+                </g>
+              </svg>
+
+              <div className="aqimobile-gaugetext">
+                <div className="aqimobile-value" style={{ color: cat?.color ?? '#8fa3c8' }}>
+                  {overall ?? '—'}
+                </div>
+                {cat && (
+                  <div className="aqimobile-badge" style={{ background: cat.bg, color: cat.color }}>
+                    {cat.label}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="aqimobile-grid">
+              <div className="aqimobile-card" style={{ borderLeft: `3px solid ${coColor}` }}>
+                <p className="aqimobile-label">CO</p>
+                <p className="aqimobile-num">{aqiData.hourly.carbon_monoxide[currentHour]} mg/m³</p>
+              </div>
+              <div className="aqimobile-card" style={{ borderLeft: `3px solid ${o3Color}` }}>
+                <p className="aqimobile-label">O3</p>
+                <p className="aqimobile-num">{aqiData.hourly.ozone[currentHour]} μg/m³</p>
+              </div>
+              <div className="aqimobile-card" style={{ borderLeft: `3px solid ${no2Color}` }}>
+                <p className="aqimobile-label">NO2</p>
+                <p className="aqimobile-num">{aqiData.hourly.nitrogen_dioxide[currentHour]} μg/m³</p>
+              </div>
+              <div className="aqimobile-card" style={{ borderLeft: `3px solid ${so2Color}` }}>
+                <p className="aqimobile-label">SO2</p>
+                <p className="aqimobile-num">{aqiData.hourly.sulphur_dioxide[currentHour]} μg/m³</p>
+              </div>
+            </div>
+
+          </div>
+
+        ) : (
+
         <div className="aqi" key={aqiData.hourly.carbon_monoxide[currentHour]}>
 
-
-             {/* ── AQI gauge lives in your existing .aqibar slot ── */}
              <div className="aqibar">
             <div className="aqi-gauge-wrap">
               <svg viewBox="0 0 200 118" width="180" height="106">
@@ -154,6 +216,8 @@ const Aqi = () => {
        
 
         </div>
+        )
+
       ) : (
         <div className="aqi1">
            <div className="aqibar1">

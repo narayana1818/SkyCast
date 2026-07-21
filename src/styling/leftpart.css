@@ -22,8 +22,8 @@ justify-content: space-around;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-   box-sizing: border-box;
+    border: 0px solid black;
+    box-sizing: border-box;
     }
     
 

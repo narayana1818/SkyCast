@@ -312,7 +312,7 @@ function getbackground()
         <input type="text"  placeholder="Search for city"  ref={inputref}  onKeyDown={(e) => {if (e.key === "Enter") { getlocation();}}}  />
         <button type="submit"  onClick={getlocation} >🔍</button>
       </div>
-        <Totalpage />
+        <Totalpage/>
         {
           loading &&   
           <div className="loader">
