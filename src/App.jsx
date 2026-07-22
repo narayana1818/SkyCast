@@ -36,27 +36,105 @@ const [nextBackground, setNextBackground] = useState(null);
 const [fading, setFading] = useState(false);
 const [sliding, setSliding] = useState(false);
    const [isMobile, setIsMobile] = useState(window.innerWidth <= 445);
+
+   function getGPSLocation() {
+    return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(
+        resolve,
+        reject,
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 0,
+        }
+      );
+    });
+  }
+  
+  async function getIPLocation() {
+    const res = await fetch("https://ipwho.is/");
+    const data = await res.json();
+  
+    if (!data.success) {
+      throw new Error("IP Location Failed");
+    }
+  
+    return {
+      latitude: data.latitude,
+      longitude: data.longitude,
+    };
+  }
 const inputref=useRef("");
-   useEffect( ()=>{
+useEffect(() => {
+
+  const getUserLocation = async () => {
+
     setError(false);
-      navigator.geolocation.getCurrentPosition(async(position)=>
-      {
-        setLocation({
-          latitude:position.coords.latitude,
-         longitude:position.coords.longitude
-        }) 
-      },
-    
+    setLoading(true);
 
+    try {
 
-      (error)=>{
-        setLoading(false)
-        setError(true)
-        console.log(error.message)
-     
+      const position = await getGPSLocation();
+
+      setLocation({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+      });
+
+      
+      localStorage.setItem(
+        "lastLocation",
+        JSON.stringify({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        })
+      );
+
+    } catch (gpsError) {
+
+      console.log("GPS Failed");
+
+      try {
+        const location = await getIPLocation();
+
+        setLocation(location);
+
+        localStorage.setItem(
+          "lastLocation",
+          JSON.stringify(location)
+        );
+
+        toast.info("Using approximate location");
+
+      } catch (ipError) {
+
+        console.log("IP Failed");
+        const lastLocation = JSON.parse(
+          localStorage.getItem("lastLocation")
+        );
+
+        if (lastLocation) {
+
+          setLocation(lastLocation);
+
+          toast.info("Using last saved location");
+
+        } else {
+
+          setError(true);
+          setLoading(false);
+
+        }
+
       }
-   )
-   },[]);
+
+    }
+
+  };
+
+  getUserLocation();
+
+}, []);
 
    useEffect(()=>{
     if(location.latitude && location.longitude)
