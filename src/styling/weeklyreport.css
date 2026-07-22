@@ -23,7 +23,7 @@
 }
 .weeklyreporttext{
     margin: 0;
-    color: lightgray;
+    color: white;
     font-size: 14px;
     padding-left: 25px;
     padding-top: 10px;
@@ -108,7 +108,7 @@ margin-top: -10px;
     color: lightgray;
 }
 .weekemoji{
-    font-size: 20px;
+    font-size: 35px;
 }
 .card128{
 
@@ -505,7 +505,9 @@ justify-content:flex-start;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content:flex-end;
+    
+    box-sizing: border-box;
 }
 .rainprobability{
     display:block;

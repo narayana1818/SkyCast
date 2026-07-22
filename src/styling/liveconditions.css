@@ -130,7 +130,7 @@
 }
 
 .humiditytext {
-    color: lightgray;
+    color: white;
     font-weight: 600;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
@@ -143,7 +143,7 @@
 }
 
 .windtext {
-    color: lightgray;
+    color: white;
     font-weight: 600;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
@@ -156,7 +156,7 @@
 }
 
 .pressuretext {
-    color: lightgray;
+    color:white;
     font-weight: 600;
     font-size: 16px;
     font-family: 'Inter', sans-serif;

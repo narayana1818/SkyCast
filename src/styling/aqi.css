@@ -61,17 +61,17 @@
     }
 .aqiresult {
         height: 100%;
-        width: 50%;
-    
+        width: 45%;
+    box-sizing: border-box;
         padding-top: 5px;
-        display: grid;
-        grid-template-columns: 80px 80px;
-        gap: 20px;
+        display: flex;
+       flex-direction: column;
+        gap: 0px;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
 }
 .mobilebreak1{
-        display: inline;
+        display: none;
 }
 
 .aqibar {
@@ -85,13 +85,17 @@
 
 .co {
         width: 100%;
-        height: 85%;
+        height:50px;
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
                 rgba(0, 0, 0, 0.23) 0px 3px 6px;
         border-radius: 15px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 20px;
         align-content: center;
         transition: 0.1s ease-in-out;
 }
@@ -109,7 +113,11 @@
                 rgba(0, 0, 0, 0.23) 0px 3px 6px;
         border-radius: 15px;
         width: 100%;
-        height: 85%;
+          padding-left: 20px;
+        height: 48px;
+           display: flex;
+        align-items: center;
+        justify-content: flex-start;
         text-align: center;
         align-content: center;
         transition: 0.1s ease-in-out;
@@ -124,7 +132,7 @@
 .no2 {
         border-radius: 15px;
         width: 100%;
-        height: 85%;
+        height: 48px;
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
@@ -132,6 +140,10 @@
         transition: 0.1s ease-in-out;
         text-align: center;
         align-content: center;
+           display: flex;
+             padding-left: 20px;
+        align-items: center;
+        justify-content: flex-start;
 }
 .no2:hover {
         transform: scale(1.006);
@@ -142,7 +154,7 @@
 .so2 {
         border-radius: 15px;
         width: 100%;
-        height: 85%;
+        height: 48px;
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
@@ -150,6 +162,10 @@
         transition: 0.1s ease-in-out;
         text-align: center;
         align-content: center;
+           display: flex;
+        align-items: center;
+          padding-left: 20px;
+        justify-content: flex-start;
 }
 
 .so2:hover {
@@ -161,23 +177,23 @@
 .cotext {
         margin: 0;
         color: white;
-        font-weight: bolder;
-        font-size: 18px;
+        font-size: 17px;
         font-family: 'Inter', sans-serif;
 }
 
 .covalue {
         margin: 0;
         color: white;
-        font-weight: bolder;
+    
         font-size: 15px;
+         padding-left: 10px;
         font-family: 'Inter', sans-serif;
 }
 
 .o3text {
         margin: 0;
         color: white;
-        font-size: 18px;
+        font-size: 17px;
         font-family:
                 'Inter', sans-serif;
 }
@@ -188,12 +204,13 @@
         font-size: 15px;
         font-weight: bolder;
         font-family: 'Inter', sans-serif;
+         padding-left: 10px;
 }
 
 .so2text {
         margin: 0;
         color: white;
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'Inter', sans-serif;
 }
 
@@ -203,12 +220,13 @@
         font-weight: bolder;
         font-size: 15px;
         font-family: 'Inter', sans-serif;
+        padding-left: 10px;
 }
 
 .no2text {
         margin: 0;
         color: white;
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'Inter', sans-serif;
 }
 
@@ -218,6 +236,7 @@
         font-size: 15px;
         font-weight: bolder;
         font-family: 'Inter', sans-serif;
+         padding-left: 10px;
 }
 
 .aqibar1 {
@@ -847,7 +866,7 @@
 .aqidivmobile {
         width: 97%;
         border-radius: 16px;
-        height: 30%;
+        height: 32%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -872,12 +891,13 @@
 
 .aqimobile-gaugerow {
         height: 45%;
-        width: 100%;
+        width: 50%;
         box-sizing: border-box;
         text-align: center;
         align-content: center;
         display: flex;
       align-items:start;
+      margin-left: 15px;
         gap: 14px;
 }
 
@@ -899,8 +919,9 @@
 
 .aqimobile-value {
         font-family: 'Inter', sans-serif;
-        font-size: 34px;
+        font-size: 38px;
         font-weight: 500;
+        margin-top: 6px;
         line-height: 1;
         transition: color 0.5s ease;
 }
@@ -932,7 +953,9 @@
         background: rgba(255, 255, 255, 0.06);
         border-radius: 10px;
         padding: 7px 10px;
+        height: 55px;
         box-sizing: border-box;
+        margin-bottom: 5px;
         transition: border-color 0.5s ease;
 }
 
@@ -940,7 +963,7 @@
         margin: 0 0 2px;
         color: white;
         font-weight: bolder;
-        font-size: 10px;
+        font-size: 15px;
         font-family: 'Inter', sans-serif;
 }
 

@@ -129,19 +129,19 @@ const Aqi = () => {
             <div className="aqimobile-grid">
               <div className="aqimobile-card" style={{ borderLeft: `3px solid ${coColor}` }}>
                 <p className="aqimobile-label">CO</p>
-                <p className="aqimobile-num">{aqiData.hourly.carbon_monoxide[currentHour]} mg/m³</p>
+                <p className="aqimobile-num" style={{ color: coColor }}>{aqiData.hourly.carbon_monoxide[currentHour]} mg/m³</p>
               </div>
               <div className="aqimobile-card" style={{ borderLeft: `3px solid ${o3Color}` }}>
                 <p className="aqimobile-label">O3</p>
-                <p className="aqimobile-num">{aqiData.hourly.ozone[currentHour]} μg/m³</p>
+                <p className="aqimobile-num" style={{ color: o3Color }}>{aqiData.hourly.ozone[currentHour]} μg/m³</p>
               </div>
               <div className="aqimobile-card" style={{ borderLeft: `3px solid ${no2Color}` }}>
                 <p className="aqimobile-label">NO2</p>
-                <p className="aqimobile-num">{aqiData.hourly.nitrogen_dioxide[currentHour]} μg/m³</p>
+                <p className="aqimobile-num" style={{ color: no2Color }} >{aqiData.hourly.nitrogen_dioxide[currentHour]} μg/m³</p>
               </div>
               <div className="aqimobile-card" style={{ borderLeft: `3px solid ${so2Color}` }}>
                 <p className="aqimobile-label">SO2</p>
-                <p className="aqimobile-num">{aqiData.hourly.sulphur_dioxide[currentHour]} μg/m³</p>
+                <p className="aqimobile-num" style={{ color: so2Color }}>{aqiData.hourly.sulphur_dioxide[currentHour]} μg/m³</p>
               </div>
             </div>
 
@@ -196,20 +196,20 @@ const Aqi = () => {
           </div>
           <div className="aqiresult">
             <div className="co">
-              <h2 className="cotext">CO</h2>
-              <h2 className="covalue">{aqiData.hourly.carbon_monoxide[currentHour]} <br className="mobilebreak1" /> mg/m³</h2>
+              <h2 className="cotext">CO :</h2>
+              <h2 className="covalue" style={{ color: coColor }}>{aqiData.hourly.carbon_monoxide[currentHour]} <br className="mobilebreak1" /> mg/m³</h2>
             </div>
             <div className="o3">
-              <h2 className="o3text">O3</h2>
-              <h2 className="o3value">{aqiData.hourly.ozone[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
+              <h2 className="o3text">O3 :</h2>
+              <h2 className="o3value" style={{ color: o3Color }}>{aqiData.hourly.ozone[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
             </div>
             <div className="no2">
-              <h2 className="no2text">NO2</h2>
-              <h2 className="no2value">{aqiData.hourly.nitrogen_dioxide[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
+              <h2 className="no2text">NO2 :</h2>
+              <h2 className="no2value" style={{ color: no2Color }}>{aqiData.hourly.nitrogen_dioxide[currentHour]}<br className="mobilebreak1" /> μ g/m³</h2>
             </div>
             <div className="so2">
-              <h2 className="so2text">SO2</h2>
-              <h2 className="so2value">{aqiData.hourly.sulphur_dioxide[currentHour]} <br className="mobilebreak1" />μ g/m³</h2>
+              <h2 className="so2text">SO2 :</h2>
+              <h2 className="so2value" style={{ color: so2Color }}>{aqiData.hourly.sulphur_dioxide[currentHour]} <br className="mobilebreak1" />μ g/m³</h2>
             </div>
           </div>
 

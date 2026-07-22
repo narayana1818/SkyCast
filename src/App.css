@@ -419,13 +419,14 @@ z-index: 999;
 
 .navbar button{
   margin-left: 20px;
-  height: 30px;
-  width:30px;
+  height: 40px;
+  width:40px;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Inter', sans-serif ;
   text-align: center;
   align-content: center;
+  padding-top: 5px;
   margin-top: 20px;
   border-radius: 50%;
   border: none;
