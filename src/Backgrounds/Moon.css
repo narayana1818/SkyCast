@@ -1,11 +1,14 @@
 .moon-bg{
 
-    position:absolute;
-    inset:0;
-    overflow:hidden;
-    z-index:-1;
-    width: 100%;
-    height: 1880px;
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        z-index: -1;
     background:linear-gradient(
     to bottom,
     #0f2027,

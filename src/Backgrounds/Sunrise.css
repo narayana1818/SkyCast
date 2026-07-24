@@ -1,10 +1,13 @@
 .sunrise-bg {
-    width: 100%;
-    height: 1760px;
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    z-index: -1;
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        z-index: -1;
 
     background: linear-gradient(180deg,
             #3B4A8C 0%,
@@ -116,12 +119,7 @@
     animation-delay: 3s;
 }
 
-.sunrise-scrim {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(15, 10, 35, .32) 0%, rgba(15, 10, 35, .04) 25%, rgba(15, 10, 35, .10) 55%, rgba(15, 10, 35, .35) 100%);
-    pointer-events: none;
-}
+
 
 @keyframes sunRise {
     from {
@@ -173,7 +171,15 @@
 
 @media screen and (max-width:320px) {
     .sunrise-bg {
-        height: 1880px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        z-index: -1;
     }
 
     .sunrise-sun {
